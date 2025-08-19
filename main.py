@@ -84,7 +84,7 @@ class SolanaAlertBot:
             "🎯 *Alert Types:*\n"
             "🚀 Multiplier alerts: 2x, 3x, 5x, 8x, 10x, up to 100x!\n"
             "📉 Loss alerts: -50%, -70%, -85%, -95%\n"
-            "� Perfect detection of all Solana tokens\n\n"
+            "💎 Perfect detection of all Solana tokens\n\n"
             "🔥 *Ready to catch some moonshots!* 🔥"
         )
         
@@ -99,7 +99,7 @@ class SolanaAlertBot:
         await update.message.reply_text(welcome_message, parse_mode='Markdown', reply_markup=reply_markup)
         
         # Start tracking if not already running
-        if not self.token_tracker.is_running:
+        if self.token_tracker and not self.token_tracker.is_running:
             asyncio.create_task(self.token_tracker.start_tracking())
     
     async def menu_command(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -575,145 +575,13 @@ class SolanaAlertBot:
                     parse_mode='Markdown'
                 )
                 continue
-            
-            logger.info(f"📥 Message received: {message_text[:50]}...")
-            logger.info(f"🔍 Found {len(contracts)} contract(s): {contracts}")
-            
-            if contracts:
-                for contract_address in contracts:
-                    logger.info(f"🔄 Processing contract: {contract_address}")
-                    await self._process_contract_address(update, contract_address)
-            else:
-                logger.debug(f"No valid contracts found in message: {message_text}")
-                
-        except Exception as e:
-            logger.error(f"💥 Error in handle_message: {e}", exc_info=True)
-    
-    async def _process_contract_address(self, update: Update, contract_address: str):
-        """Process a detected contract address."""
-        processing_msg = None  # Initialize to handle potential errors
-        
-        try:
-            if not update.effective_chat or not update.message:
-                logger.error("Invalid update object - missing chat or message")
-                return
-                
-            chat_id = update.effective_chat.id
-            message_id = update.message.message_id
-            
-            logger.info(f"🔄 Starting to process contract {contract_address} for chat {chat_id}")
-            
-            # Send processing message
-            processing_msg = await update.message.reply_text(
-                f"🔍 *Scanning Token...*\n\n"
-                f"📝 Contract: `{contract_address}`\n"
-                f"⏳ Fetching token data...",
-                parse_mode='Markdown'
-            )
-            
-            logger.info(f"📤 Sent processing message for {contract_address}")
-            
-            # Start tracking if not already running
-            if self.token_tracker and not self.token_tracker.is_running:
-                logger.info("🚀 Starting token tracker")
-                asyncio.create_task(self.token_tracker.start_tracking())
-            
-            # Add token for tracking with timeout
-            logger.info(f"🔄 Adding token {contract_address} to tracker")
-            
-            if not self.token_tracker:
-                logger.error("Token tracker not initialized")
-                await processing_msg.edit_text(
-                    f"❌ *System Error* ❌\n\n"
-                    f"Token tracker not initialized. Please restart the bot.",
-                    parse_mode='Markdown'
-                )
-                return
-            
-            try:
-                # Add a timeout to prevent hanging
-                success = await asyncio.wait_for(
-                    self.token_tracker.add_token(contract_address, chat_id, message_id),
-                    timeout=30.0  # 30 second timeout
-                )
-                logger.info(f"✅ Token addition result: {success}")
-                
-            except asyncio.TimeoutError:
-                logger.error(f"⏰ Timeout adding token {contract_address}")
-                await processing_msg.edit_text(
-                    f"⏰ *Timeout Processing Token* ⏰\n\n"
-                    f"📝 `{contract_address}`\n\n"
-                    f"The request timed out. Please try again later.",
-                    parse_mode='Markdown'
-                )
-                return
-            
-            if success:
-                # Get token info for confirmation
-                token_data = self.token_tracker.tracking_tokens.get(contract_address) if self.token_tracker else None
-                if token_data:
-                    confirmation_message = (
-                        f"✅ *Token Added Successfully!* ✅\n\n"
-                        f"💎 *{token_data['name']}* ({token_data['symbol']})\n"
-                        f"📝 `{contract_address}`\n\n"
-                        f"💰 *Market Cap:* ${token_data['confirmed_scan_mcap']:,.2f}\n"
-                        f"💵 *Price:* ${token_data['current_price']:.8f}\n\n"
-                        f"🚀 *Tracking multipliers:* 2x to 100x\n"
-                        f"📉 *Loss alert:* -50% from scan\n\n"
-                        f"🔥 *Ready to moon!* 🔥"
-                    )
-                else:
-                    confirmation_message = (
-                        f"✅ *Token Added Successfully!* ✅\n\n"
-                        f"📝 `{contract_address}`\n\n"
-                        f"🚀 Now tracking for pumps!\n"
-                        f"📉 Will alert on -50% loss\n\n"
-                        f"🔥 *Ready to moon!* 🔥"
-                    )
-                
-                await processing_msg.edit_text(confirmation_message, parse_mode='Markdown')
-                logger.info(f"✅ Successfully added token {contract_address} for chat {chat_id}")
-                
-            else:
-                error_message = (
-                    f"❌ *Failed to Add Token* ❌\n\n"
-                    f"📝 `{contract_address}`\n\n"
-                    f"*Possible reasons:*\n"
-                    f"• Invalid contract address\n"
-                    f"• Token not found on supported DEXs\n"
-                    f"• API temporarily unavailable\n"
-                    f"• Token already being tracked\n\n"
-                    f"🔄 Try again in a few moments"
-                )
-                
-                await processing_msg.edit_text(error_message, parse_mode='Markdown')
-                logger.warning(f"❌ Failed to add token {contract_address} for chat {chat_id}")
-        
-        except Exception as e:
-            logger.error(f"💥 Error processing contract {contract_address}: {e}")
-            logger.exception("Full traceback:")
-            
-            error_message = (
-                f"💥 *Error Processing Token* 💥\n\n"
-                f"📝 `{contract_address}`\n\n"
-                f"*Error:* {str(e)[:100]}...\n\n"
-                f"🔄 Please try again later"
-            )
-            
-            try:
-                # Check if processing_msg was successfully created
-                if 'processing_msg' in locals() and processing_msg:
-                    await processing_msg.edit_text(error_message, parse_mode='Markdown')
-                elif update and update.message:
-                    await update.message.reply_text(error_message, parse_mode='Markdown')
-            except Exception as msg_error:
-                logger.error(f"Failed to send error message: {msg_error}")
     
     async def run(self):
-        """Run the bot."""
+        """Main run method for the bot."""
         try:
+            logger.info("🚀 Starting Enhanced Solana Alert Bot...")
+            
             await self.initialize()
-            logger.info("🚀 Starting Solana Alert Bot...")
             
             # Verify application was created
             if not self.application:
@@ -729,7 +597,7 @@ class SolanaAlertBot:
                 logger.error("Application updater not available")
                 return
             
-            logger.info("✅ Bot is running and ready to track tokens!")
+            logger.info("✅ Enhanced Bot is running with perfect token detection!")
             
             # Keep the bot running
             while True:
