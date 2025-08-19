@@ -363,15 +363,15 @@ class SolanaAlertBot:
         await query.answer()
         
         if query.data == "menu_main":
-            await self.menu_command(update, context)
+            await self.show_main_menu(query)
         elif query.data == "menu_list":
-            await self.list_tokens_command(update, context)
+            await self.show_tokens_list(query)
         elif query.data == "menu_stats":
-            await self.stats_command(update, context)
+            await self.show_group_stats(query)
         elif query.data == "menu_help":
-            await self.help_command(update, context)
+            await self.show_help_info(query)
         elif query.data == "menu_status":
-            await self.status_command(update, context)
+            await self.show_bot_status(query)
         elif query.data == "menu_search":
             await query.edit_message_text(
                 "🔍 *Search Tokens*\n\n"
@@ -386,6 +386,177 @@ class SolanaAlertBot:
                 "Get contract addresses with `/list`.",
                 parse_mode='Markdown'
             )
+    
+    async def show_main_menu(self, query):
+        """Display the main menu in callback query."""
+        keyboard = [
+            [InlineKeyboardButton("📊 View Tracked Tokens", callback_data="menu_list")],
+            [InlineKeyboardButton("📈 Group Statistics", callback_data="menu_stats")],
+            [InlineKeyboardButton("🔍 Search Tokens", callback_data="menu_search")],
+            [InlineKeyboardButton("❌ Remove Tokens", callback_data="menu_remove")],
+            [InlineKeyboardButton("ℹ️ Help & Info", callback_data="menu_help")],
+            [InlineKeyboardButton("⚙️ Bot Status", callback_data="menu_status")]
+        ]
+        reply_markup = InlineKeyboardMarkup(keyboard)
+        
+        menu_text = (
+            "🎛️ *Main Menu* 🎛️\n\n"
+            "Choose an option below to manage your Solana token tracking:\n\n"
+            "📊 *View Tokens* - See all tracked tokens in this group\n"
+            "📈 *Statistics* - Group performance overview\n"
+            "🔍 *Search* - Find specific tokens\n"
+            "❌ *Remove* - Stop tracking unwanted tokens\n"
+            "ℹ️ *Help* - Commands and usage guide\n"
+            "⚙️ *Status* - Bot performance information"
+        )
+        
+        await query.edit_message_text(menu_text, parse_mode='Markdown', reply_markup=reply_markup)
+    
+    async def show_tokens_list(self, query):
+        """Display all tracked tokens for this group in callback query."""
+        if not query.message or not query.message.chat:
+            return
+            
+        chat_id = query.message.chat.id
+        tokens = await self.database.get_tokens_for_chat(chat_id)
+        
+        if not tokens:
+            keyboard = [
+                [InlineKeyboardButton("🎛️ Back to Menu", callback_data="menu_main")]
+            ]
+            reply_markup = InlineKeyboardMarkup(keyboard)
+            
+            await query.edit_message_text(
+                "📋 *No Tokens Tracked Yet*\n\n"
+                "Send a Solana contract address to start tracking!",
+                parse_mode='Markdown',
+                reply_markup=reply_markup
+            )
+            return
+        
+        # Create token list message
+        message_text = "📊 *Tracked Tokens in This Group* 📊\n\n"
+        
+        for i, token in enumerate(tokens[:10], 1):  # Limit to 10 for callback
+            current_mcap = token.get('current_mcap', 0) or 0
+            initial_mcap = token.get('initial_mcap', 1) or 1
+            multiplier = current_mcap / initial_mcap if initial_mcap > 0 else 0
+            
+            status_emoji = "🚀" if multiplier > 1 else "📉" if multiplier < 1 else "➖"
+            
+            message_text += (
+                f"{status_emoji} *{i}. {token['symbol']}*\n"
+                f"📝 {token['name'][:30]}{'...' if len(token['name']) > 30 else ''}\n"
+                f"💰 ${current_mcap:,.0f} ({multiplier:.2f}x)\n"
+                f"🔗 `{token['contract_address'][:8]}...{token['contract_address'][-8:]}`\n"
+                f"⏰ Added: {token['detected_at'][:10]}\n\n"
+            )
+        
+        if len(tokens) > 10:
+            message_text += f"... and {len(tokens) - 10} more tokens\n\n"
+        
+        keyboard = [
+            [InlineKeyboardButton("❌ Remove Token", callback_data="menu_remove")],
+            [InlineKeyboardButton("📈 View Stats", callback_data="menu_stats")],
+            [InlineKeyboardButton("🎛️ Back to Menu", callback_data="menu_main")]
+        ]
+        reply_markup = InlineKeyboardMarkup(keyboard)
+        
+        await query.edit_message_text(message_text, parse_mode='Markdown', reply_markup=reply_markup)
+    
+    async def show_group_stats(self, query):
+        """Display group statistics in callback query."""
+        if not query.message or not query.message.chat:
+            return
+            
+        chat_id = query.message.chat.id
+        stats = await self.database.get_token_stats(chat_id)
+        
+        stats_message = (
+            f"📈 *Group Statistics* 📈\n\n"
+            f"📊 *Overview:*\n"
+            f"• Total Tokens: {stats['total_tokens']}\n"
+            f"• Active Tokens: {stats['active_tokens']}\n"
+            f"• Pumping Tokens: {stats['pumping_tokens']} 🚀\n"
+            f"• Dumping Tokens: {stats['dumping_tokens']} 📉\n\n"
+            f"🎯 *Performance:*\n"
+            f"• Average Multiplier: {stats['avg_multiplier']}x\n"
+            f"• Best Performer: {stats['max_multiplier']}x\n\n"
+            f"⚡ *Bot Status:*\n"
+            f"• Monitoring: {'✅ Active' if self.token_tracker and self.token_tracker.is_running else '❌ Stopped'}\n"
+            f"• Update Interval: 15 seconds\n"
+            f"• Data Source: DexScreener Primary\n"
+        )
+        
+        keyboard = [
+            [InlineKeyboardButton("📊 View Tokens", callback_data="menu_list")],
+            [InlineKeyboardButton("🔍 Search", callback_data="menu_search")],
+            [InlineKeyboardButton("🎛️ Back to Menu", callback_data="menu_main")]
+        ]
+        reply_markup = InlineKeyboardMarkup(keyboard)
+        
+        await query.edit_message_text(stats_message, parse_mode='Markdown', reply_markup=reply_markup)
+    
+    async def show_help_info(self, query):
+        """Display help information in callback query."""
+        help_message = (
+            "🆘 *Enhanced Solana Alert Bot Help* 🆘\n\n"
+            "*🔍 Perfect Token Detection:*\n"
+            "• Detects ALL Solana tokens from any launchpad\n"
+            "• Supports pump.fun, DexScreener, Birdeye links\n"
+            "• Recognizes contract addresses in any format\n\n"
+            "*📊 Data Sources (Priority Order):*\n"
+            "1. 🥇 DexScreener - Most comprehensive data\n"
+            "2. 🥈 Birdeye - Real-time price feeds\n"
+            "3. 🥉 Pump.fun - Meme token specialists\n\n"
+            "*⚡ Alert System:*\n"
+            "🚀 Multipliers: 2x, 3x, 5x, 8x, 10x, up to 100x\n"
+            "📉 Loss Protection: -50%, -70%, -85%, -95%\n"
+            "⏱️ Ultra-fast monitoring: Every 15 seconds\n\n"
+            "*🛠️ Commands:*\n"
+            "• `/menu` - Main control panel\n"
+            "• `/list` - Show all tracked tokens\n"
+            "• `/stats` - Group performance stats\n"
+            "• `/search <query>` - Find specific tokens\n"
+            "• `/remove <address>` - Stop tracking a token\n\n"
+            "🔥 *Ready to catch every moonshot!* 🔥"
+        )
+        
+        keyboard = [
+            [InlineKeyboardButton("🎛️ Back to Menu", callback_data="menu_main")]
+        ]
+        reply_markup = InlineKeyboardMarkup(keyboard)
+        
+        await query.edit_message_text(help_message, parse_mode='Markdown', reply_markup=reply_markup)
+    
+    async def show_bot_status(self, query):
+        """Display bot status in callback query."""
+        status = self.token_tracker.get_tracking_status() if self.token_tracker else {"active_tokens": 0, "is_running": False}
+        
+        status_message = (
+            f"⚙️ *Enhanced Bot Status* ⚙️\n\n"
+            f"🤖 **System Status:**\n"
+            f"• Bot Running: {'✅ Yes' if status.get('is_running', False) else '❌ No'}\n"
+            f"• Active Tokens: {status.get('active_tokens', 0)}\n"
+            f"• Monitoring Interval: 15 seconds ⚡\n\n"
+            f"📊 **Data Sources:**\n"
+            f"• 🥇 DexScreener (Primary)\n"
+            f"• 🥈 Birdeye (Backup)\n"
+            f"• 🥉 Pump.fun (Meme tokens)\n\n"
+            f"🚀 **Alert System:**\n"
+            f"• Multiplier Tracking: Up to 100x\n"
+            f"• Loss Protection: 4 levels\n"
+            f"• Perfect Token Detection: ✅\n"
+            f"• Group-Specific Tracking: ✅\n\n"
+            f"⚡ *Ready for moonshots!* 🚀"
+        )
+        
+        keyboard = [
+            [InlineKeyboardButton("🎛️ Back to Menu", callback_data="menu_main")]
+        ]
+        reply_markup = InlineKeyboardMarkup(keyboard)
+        
+        await query.edit_message_text(status_message, parse_mode='Markdown', reply_markup=reply_markup)
     
     async def status_command(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         """Handle /status command with enhanced system information."""
