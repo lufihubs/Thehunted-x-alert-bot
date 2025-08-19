@@ -8776,3 +8776,1299 @@ telegram.error.NetworkError: httpx.ReadError:
 2025-08-19 09:03:53,720 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
 2025-08-19 09:04:03,886 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
 2025-08-19 09:04:14,122 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:04:24,349 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:04:34,520 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:04:44,707 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:04:54,881 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:05:05,416 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:05:15,584 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:05:25,753 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:05:35,935 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:05:46,101 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:05:56,270 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:06:06,435 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:06:16,598 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:06:26,762 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:06:36,930 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:06:47,128 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:06:57,307 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:07:07,476 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:07:17,676 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:07:27,230 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/sendMessage "HTTP/1.1 200 OK"
+2025-08-19 09:07:27,231 - token_tracker - INFO - 📉 Sent loss alert for Crimetok (-50.6%)
+2025-08-19 09:07:27,842 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:07:38,010 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:07:48,174 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:07:58,358 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:08:08,540 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:08:18,727 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:08:28,890 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:08:39,089 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:08:49,254 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:08:59,457 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:09:09,622 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:09:19,785 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:09:29,953 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:09:40,131 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:09:50,316 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:10:00,484 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:10:10,662 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:10:20,862 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:10:31,030 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:10:41,199 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:10:51,363 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:11:01,562 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:11:11,735 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:11:21,913 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:11:32,088 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:11:42,306 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:11:52,479 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:12:02,667 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 09:12:12,842 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:28:55,410 - telegram.ext.Updater - ERROR - Error while getting Updates: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2025-08-19 21:28:55,498 - telegram.ext.Updater - ERROR - Exception happened while polling for updates.
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_exceptions.py", line 10, in map_exceptions
+    yield
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 114, in connect_tcp
+    stream: anyio.abc.ByteStream = await anyio.connect_tcp(
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\anyio\_core\_sockets.py", line 215, in connect_tcp
+    gai_res = await getaddrinfo(
+              ^^^^^^^^^^^^^^^^^^
+        target_host, remote_port, family=family, type=socket.SOCK_STREAM
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\anyio\_core\_sockets.py", line 592, in getaddrinfo
+    gai_res = await get_async_backend().getaddrinfo(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        encoded_host, port, family=family, type=type, proto=proto, flags=flags
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2698, in getaddrinfo
+    return await get_running_loop().getaddrinfo(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        host, port, family=family, type=type, proto=proto, flags=flags
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python313\Lib\asyncio\base_events.py", line 939, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, getaddr_func, host, port, family, type, proto, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Python313\Lib\socket.py", line 977, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 60, in map_httpcore_exceptions
+    yield
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 353, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 262, in handle_async_request
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 245, in handle_async_request
+    response = await connection.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 92, in handle_async_request
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 69, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 117, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_backends\auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 112, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 216, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1530, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1617, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1645, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1682, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1719, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 352, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 77, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 543, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 381, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 3661, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 469, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 325, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 497, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 168, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 291, in _request_wrapper
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 277, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 240, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2025-08-19 21:28:56,744 - solana_api - WARNING - No token data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-19 21:28:56,761 - solana_api - WARNING - No token data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-19 21:28:56,781 - solana_api - WARNING - No token data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-19 21:28:56,792 - solana_api - WARNING - No token data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-19 21:28:56,824 - solana_api - WARNING - No token data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-19 21:28:57,758 - telegram.ext.Updater - ERROR - Error while getting Updates: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2025-08-19 21:28:57,842 - telegram.ext.Updater - ERROR - Exception happened while polling for updates.
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_exceptions.py", line 10, in map_exceptions
+    yield
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 114, in connect_tcp
+    stream: anyio.abc.ByteStream = await anyio.connect_tcp(
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\anyio\_core\_sockets.py", line 215, in connect_tcp
+    gai_res = await getaddrinfo(
+              ^^^^^^^^^^^^^^^^^^
+        target_host, remote_port, family=family, type=socket.SOCK_STREAM
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\anyio\_core\_sockets.py", line 592, in getaddrinfo
+    gai_res = await get_async_backend().getaddrinfo(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        encoded_host, port, family=family, type=type, proto=proto, flags=flags
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2698, in getaddrinfo
+    return await get_running_loop().getaddrinfo(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        host, port, family=family, type=type, proto=proto, flags=flags
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python313\Lib\asyncio\base_events.py", line 939, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, getaddr_func, host, port, family, type, proto, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Python313\Lib\socket.py", line 977, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 60, in map_httpcore_exceptions
+    yield
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 353, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 262, in handle_async_request
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 245, in handle_async_request
+    response = await connection.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 92, in handle_async_request
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 69, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 117, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_backends\auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 112, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 216, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1530, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1617, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1645, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1682, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1719, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 352, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 77, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 543, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 381, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 3661, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 469, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 325, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 497, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 168, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 291, in _request_wrapper
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 277, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 240, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2025-08-19 21:28:59,738 - telegram.ext.Updater - ERROR - Error while getting Updates: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2025-08-19 21:28:59,810 - telegram.ext.Updater - ERROR - Exception happened while polling for updates.
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_exceptions.py", line 10, in map_exceptions
+    yield
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 114, in connect_tcp
+    stream: anyio.abc.ByteStream = await anyio.connect_tcp(
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\anyio\_core\_sockets.py", line 215, in connect_tcp
+    gai_res = await getaddrinfo(
+              ^^^^^^^^^^^^^^^^^^
+        target_host, remote_port, family=family, type=socket.SOCK_STREAM
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\anyio\_core\_sockets.py", line 592, in getaddrinfo
+    gai_res = await get_async_backend().getaddrinfo(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        encoded_host, port, family=family, type=type, proto=proto, flags=flags
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2698, in getaddrinfo
+    return await get_running_loop().getaddrinfo(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        host, port, family=family, type=type, proto=proto, flags=flags
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python313\Lib\asyncio\base_events.py", line 939, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, getaddr_func, host, port, family, type, proto, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Python313\Lib\socket.py", line 977, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 60, in map_httpcore_exceptions
+    yield
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 353, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 262, in handle_async_request
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 245, in handle_async_request
+    response = await connection.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 92, in handle_async_request
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 69, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 117, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_backends\auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 112, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 216, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1530, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1617, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1645, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1682, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1719, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 352, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 77, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 543, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 381, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 3661, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 469, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 325, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 497, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 168, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 291, in _request_wrapper
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 277, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 240, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2025-08-19 21:29:02,309 - telegram.ext.Updater - ERROR - Error while getting Updates: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2025-08-19 21:29:02,313 - telegram.ext.Updater - ERROR - Exception happened while polling for updates.
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_exceptions.py", line 10, in map_exceptions
+    yield
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 114, in connect_tcp
+    stream: anyio.abc.ByteStream = await anyio.connect_tcp(
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\anyio\_core\_sockets.py", line 215, in connect_tcp
+    gai_res = await getaddrinfo(
+              ^^^^^^^^^^^^^^^^^^
+        target_host, remote_port, family=family, type=socket.SOCK_STREAM
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\anyio\_core\_sockets.py", line 592, in getaddrinfo
+    gai_res = await get_async_backend().getaddrinfo(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        encoded_host, port, family=family, type=type, proto=proto, flags=flags
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2698, in getaddrinfo
+    return await get_running_loop().getaddrinfo(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        host, port, family=family, type=type, proto=proto, flags=flags
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python313\Lib\asyncio\base_events.py", line 939, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, getaddr_func, host, port, family, type, proto, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Python313\Lib\socket.py", line 977, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 60, in map_httpcore_exceptions
+    yield
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 353, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 262, in handle_async_request
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 245, in handle_async_request
+    response = await connection.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 92, in handle_async_request
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 69, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 117, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_backends\auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 112, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 216, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1530, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1617, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1645, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1682, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1719, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 352, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 77, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 543, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 381, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 3661, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 469, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 325, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 497, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 168, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 291, in _request_wrapper
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 277, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 240, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2025-08-19 21:29:05,829 - telegram.ext.Updater - ERROR - Error while getting Updates: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2025-08-19 21:29:05,834 - telegram.ext.Updater - ERROR - Exception happened while polling for updates.
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_exceptions.py", line 10, in map_exceptions
+    yield
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 114, in connect_tcp
+    stream: anyio.abc.ByteStream = await anyio.connect_tcp(
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\anyio\_core\_sockets.py", line 215, in connect_tcp
+    gai_res = await getaddrinfo(
+              ^^^^^^^^^^^^^^^^^^
+        target_host, remote_port, family=family, type=socket.SOCK_STREAM
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\anyio\_core\_sockets.py", line 592, in getaddrinfo
+    gai_res = await get_async_backend().getaddrinfo(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        encoded_host, port, family=family, type=type, proto=proto, flags=flags
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2698, in getaddrinfo
+    return await get_running_loop().getaddrinfo(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        host, port, family=family, type=type, proto=proto, flags=flags
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python313\Lib\asyncio\base_events.py", line 939, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, getaddr_func, host, port, family, type, proto, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Python313\Lib\socket.py", line 977, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 60, in map_httpcore_exceptions
+    yield
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 353, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 262, in handle_async_request
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 245, in handle_async_request
+    response = await connection.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 92, in handle_async_request
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 69, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 117, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_backends\auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 112, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 216, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1530, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1617, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1645, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1682, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1719, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 352, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 77, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 543, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 381, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 3661, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 469, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 325, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 497, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 168, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 291, in _request_wrapper
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 277, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 240, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2025-08-19 21:29:10,973 - telegram.ext.Updater - ERROR - Error while getting Updates: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2025-08-19 21:29:10,976 - telegram.ext.Updater - ERROR - Exception happened while polling for updates.
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_exceptions.py", line 10, in map_exceptions
+    yield
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 114, in connect_tcp
+    stream: anyio.abc.ByteStream = await anyio.connect_tcp(
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\anyio\_core\_sockets.py", line 215, in connect_tcp
+    gai_res = await getaddrinfo(
+              ^^^^^^^^^^^^^^^^^^
+        target_host, remote_port, family=family, type=socket.SOCK_STREAM
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\anyio\_core\_sockets.py", line 592, in getaddrinfo
+    gai_res = await get_async_backend().getaddrinfo(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        encoded_host, port, family=family, type=type, proto=proto, flags=flags
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2698, in getaddrinfo
+    return await get_running_loop().getaddrinfo(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        host, port, family=family, type=type, proto=proto, flags=flags
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python313\Lib\asyncio\base_events.py", line 939, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, getaddr_func, host, port, family, type, proto, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Python313\Lib\socket.py", line 977, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 60, in map_httpcore_exceptions
+    yield
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 353, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 262, in handle_async_request
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 245, in handle_async_request
+    response = await connection.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 92, in handle_async_request
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 69, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 117, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_backends\auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 112, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 216, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1530, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1617, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1645, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1682, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1719, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 352, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 77, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 543, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 381, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 3661, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 469, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 325, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 497, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 168, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 291, in _request_wrapper
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 277, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 240, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2025-08-19 21:29:29,436 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:29:39,629 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:29:49,821 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:29:59,880 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/sendMessage "HTTP/1.1 200 OK"
+2025-08-19 21:29:59,883 - token_tracker - INFO - 📉 Sent loss alert for PUSH (-65.4%)
+2025-08-19 21:30:00,021 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:30:01,559 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/sendMessage "HTTP/1.1 200 OK"
+2025-08-19 21:30:01,562 - token_tracker - INFO - 📉 Sent loss alert for ELONWIFHAT (-79.7%)
+2025-08-19 21:30:10,252 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:30:20,435 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:30:21,061 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/sendMessage "HTTP/1.1 200 OK"
+2025-08-19 21:30:30,650 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:30:40,853 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:30:51,064 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:31:01,282 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:31:11,492 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:31:21,733 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:31:32,042 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:31:42,304 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:31:52,518 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:32:02,922 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:32:13,216 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:32:23,619 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:32:33,832 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:32:44,045 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:32:54,257 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:33:04,471 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:33:14,759 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:33:24,973 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:33:35,667 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:33:45,878 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:33:56,079 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:34:06,276 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:34:16,469 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:34:26,670 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:34:36,873 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:34:47,101 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:34:57,310 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:35:07,540 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:35:17,795 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:35:29,036 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:35:40,593 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:35:50,867 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:36:02,052 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:36:12,636 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:36:23,290 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:37:15,002 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:37:39,108 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:37:49,725 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:38:00,435 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:38:10,635 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:38:20,923 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:38:31,439 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:38:41,669 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:38:52,276 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:39:02,556 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:39:13,719 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:39:25,003 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:39:49,464 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:40:01,006 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:40:26,900 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:40:37,114 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:40:47,331 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:40:57,533 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:41:07,743 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:41:17,960 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:41:28,467 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:41:38,747 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:41:49,030 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:42:00,456 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:42:23,471 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:42:33,667 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:42:43,866 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:42:54,905 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:43:05,190 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:43:15,404 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:43:25,600 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:43:35,809 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:43:46,021 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:43:56,243 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:44:06,455 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:44:16,660 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:44:26,869 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:44:37,074 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:44:47,279 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:44:57,495 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:45:23,531 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:45:33,791 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:45:44,002 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:45:54,217 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:46:04,425 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:46:14,631 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:46:24,978 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:46:35,232 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:46:45,453 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:46:55,683 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:47:05,906 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:47:16,343 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:47:26,544 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:47:37,415 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:47:47,622 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:47:57,866 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:48:08,515 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:48:18,742 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:48:28,957 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:48:39,219 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:48:49,425 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:48:59,629 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:49:11,158 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:49:21,371 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:49:31,682 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:49:41,913 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:49:52,596 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:50:02,806 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:50:13,018 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:50:23,287 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:50:33,494 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:50:43,699 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:50:53,900 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:51:04,118 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:51:14,354 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:51:24,551 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:51:34,750 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:51:45,091 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:51:55,309 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:52:05,527 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:52:15,747 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:52:25,970 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:52:36,191 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:52:46,396 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:52:57,067 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-19 21:53:08,571 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"

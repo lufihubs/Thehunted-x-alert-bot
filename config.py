@@ -3,15 +3,15 @@ import os
 from typing import Optional
 
 class Config:
-    # Telegram Bot Token
-    TELEGRAM_BOT_TOKEN: Optional[str] = "8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ"
+    # Telegram Bot Token - Use environment variable for production
+    TELEGRAM_BOT_TOKEN: Optional[str] = os.getenv('TELEGRAM_BOT_TOKEN', "8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ")
     
     # API Keys (optional, but recommended for rate limits)
     BIRDEYE_API_KEY: Optional[str] = os.getenv('BIRDEYE_API_KEY')
     DEXSCREENER_API_KEY: Optional[str] = os.getenv('DEXSCREENER_API_KEY')
     
-    # Database settings
-    DATABASE_PATH: str = 'tokens.db'
+    # Database settings - Railway compatible
+    DATABASE_PATH: str = os.getenv('DATABASE_PATH', 'tokens.db')
     
     # Tracking settings
     PRICE_CHECK_INTERVAL: int = 15  # seconds - faster monitoring for better rug detection
