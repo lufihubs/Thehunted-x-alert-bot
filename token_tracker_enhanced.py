@@ -186,22 +186,31 @@ class TokenTracker:
                     current_info = await api.get_token_info(contract_address)
                     
                     if current_info and current_info.get('market_cap', 0) > 0:
-                        # Update token data
+                        # Update token data with real-time price information
                         old_mcap = token_data['current_mcap']
                         new_mcap = current_info['market_cap']
                         new_price = current_info['price']
                         
-                        # Update tracking data
+                        # Update tracking data with all current values
                         token_data['current_mcap'] = new_mcap
                         token_data['current_price'] = new_price
                         token_data['highest_mcap'] = max(token_data['highest_mcap'], new_mcap)
                         token_data['lowest_mcap'] = min(token_data['lowest_mcap'], new_mcap)
                         token_data['last_updated'] = datetime.now()
                         
-                        # Update database
+                        # Calculate real-time loss percentage for rug detection
+                        baseline_mcap = token_data.get('confirmed_scan_mcap') or token_data['initial_mcap']
+                        if baseline_mcap > 0:
+                            loss_percentage = ((new_mcap - baseline_mcap) / baseline_mcap) * 100
+                            token_data['current_loss_percentage'] = loss_percentage
+                            
+                            # Real-time rug detection alert
+                            await self._check_rug_detection_alert(contract_address, token_data, chat_id, loss_percentage)
+                        
+                        # Update database with latest prices
                         await self.database.update_token_price(contract_address, new_mcap, new_price)
                         
-                        # Check for alerts - group-specific
+                        # Check for all alerts in real-time - group-specific
                         await self._check_multiplier_alerts_for_group(contract_address, token_data, chat_id)
                         await self._check_loss_alerts_for_group(contract_address, token_data, chat_id)
                         
@@ -293,6 +302,62 @@ class TokenTracker:
         except Exception as e:
             logger.error(f"Error checking loss alerts for {contract_address} in group {chat_id}: {e}")
     
+    async def _check_rug_detection_alert(self, contract_address: str, token_data: Dict, chat_id: int, loss_percentage: float):
+        """Check and send real-time rug detection alerts."""
+        try:
+            # Check if token is potentially rugged (below rug detection threshold)
+            if loss_percentage <= Config.RUG_DETECTION_THRESHOLD:
+                # Use a special rug alert tracking system
+                if not hasattr(self, 'rug_alerts_sent'):
+                    self.rug_alerts_sent = set()
+                
+                rug_alert_key = f"rug_{contract_address}_{chat_id}"
+                if rug_alert_key in self.rug_alerts_sent:
+                    return
+                
+                # Check alert cooldown
+                if self._is_alert_on_cooldown(contract_address, chat_id, 'rug'):
+                    return
+                
+                # Send rug detection alert
+                await self._send_rug_detection_alert(contract_address, token_data, chat_id, loss_percentage)
+                
+                # Mark as sent to prevent spam
+                self.rug_alerts_sent.add(rug_alert_key)
+                
+                # Set cooldown
+                self._set_alert_cooldown(contract_address, chat_id, 'rug')
+                
+        except Exception as e:
+            logger.error(f"Error checking rug detection for {contract_address} in group {chat_id}: {e}")
+    
+    async def _send_rug_detection_alert(self, contract_address: str, token_data: Dict, chat_id: int, loss_percentage: float):
+        """Send real-time rug detection alert."""
+        try:
+            message = f"""🚨 **POTENTIAL RUG DETECTED** 🚨
+
+🪙 **{token_data['symbol']}** ({token_data['name']})
+📉 **SEVERE LOSS**: {loss_percentage:.1f}%
+💰 **Current MCap**: ${token_data['current_mcap']:,.0f}
+📊 **Baseline MCap**: ${token_data.get('confirmed_scan_mcap', token_data['initial_mcap']):,.0f}
+
+⚠️ **WARNING**: Token has dropped below {Config.RUG_DETECTION_THRESHOLD}%
+⚠️ **CAUTION**: This may indicate a rug pull or major dump
+⚠️ **ADVICE**: Consider exit strategy immediately
+
+🔗 **Contract**: `{contract_address}`"""
+
+            await self.bot.send_message(
+                chat_id=chat_id,
+                text=message,
+                parse_mode='Markdown'
+            )
+            
+            logger.info(f"🚨 Sent rug detection alert for {token_data['symbol']} in group {chat_id} ({loss_percentage:.1f}% loss)")
+            
+        except Exception as e:
+            logger.error(f"Error sending rug detection alert: {e}")
+
     async def _send_multiplier_alert(self, contract_address: str, token_data: Dict, chat_id: int, 
                                    alert_multiplier: int, current_multiplier: float):
         """Send multiplier alert to specific group."""
@@ -447,7 +512,7 @@ class TokenTracker:
     async def _update_multiplier_alerts_db(self, contract_address: str, chat_id: int):
         """Update multiplier alerts in database."""
         try:
-            sent_multipliers = list(self.sent_alerts[contract_address][chat_id])
+            sent_multipliers = [float(m) for m in self.sent_alerts[contract_address][chat_id]]
             await self.database.update_multipliers_alerted(contract_address, sent_multipliers)
         except Exception as e:
             logger.error(f"Error updating multiplier alerts in DB: {e}")

@@ -14,7 +14,7 @@ class Config:
     DATABASE_PATH: str = os.getenv('DATABASE_PATH', 'tokens.db')
     
     # Tracking settings
-    PRICE_CHECK_INTERVAL: int = 10  # seconds - faster monitoring for real-time alerts
+    PRICE_CHECK_INTERVAL: int = 5  # seconds - ultra-fast real-time monitoring
     MAX_TOKENS_PER_GROUP: int = 100
     
     # Multi-group support settings
