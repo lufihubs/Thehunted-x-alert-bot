@@ -9,13 +9,26 @@ class Database:
         self.db_path = db_path
         
     async def init_db(self):
-        """Initialize the database with tables."""
+        """Initialize the database with enhanced tables for group-specific tracking."""
         async with aiosqlite.connect(self.db_path) as db:
-            # Create tokens table
+            # Create groups table for group-specific settings
+            await db.execute('''
+                CREATE TABLE IF NOT EXISTS groups (
+                    id INTEGER PRIMARY KEY,
+                    chat_id INTEGER UNIQUE NOT NULL,
+                    chat_title TEXT,
+                    chat_type TEXT,
+                    settings TEXT DEFAULT '{}',  -- JSON settings for each group
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    is_active BOOLEAN DEFAULT TRUE
+                )
+            ''')
+            
+            # Enhanced tokens table with group-specific tracking
             await db.execute('''
                 CREATE TABLE IF NOT EXISTS tokens (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    contract_address TEXT UNIQUE NOT NULL,
+                    contract_address TEXT NOT NULL,
                     symbol TEXT,
                     name TEXT,
                     initial_mcap REAL NOT NULL,
@@ -27,25 +40,47 @@ class Database:
                     highest_mcap REAL,
                     highest_price REAL,
                     chat_id INTEGER NOT NULL,
+                    group_id INTEGER,
                     message_id INTEGER,
                     detected_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                     last_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                     is_active BOOLEAN DEFAULT TRUE,
                     platform TEXT,
+                    source_api TEXT DEFAULT 'dexscreener',
+                    dex_name TEXT,
+                    pair_address TEXT,
+                    liquidity_usd REAL DEFAULT 0,
+                    volume_24h REAL DEFAULT 0,
+                    price_change_24h REAL DEFAULT 0,
                     multipliers_alerted TEXT DEFAULT '[]',
-                    loss_50_alerted BOOLEAN DEFAULT FALSE,
-                    loss_alerts_sent TEXT DEFAULT '[]',  -- JSON array of loss percentages alerted
+                    loss_alerts_sent TEXT DEFAULT '[]',
                     confirmed_scan_mcap REAL DEFAULT NULL,
-                    scan_confirmation_count INTEGER DEFAULT 0
+                    scan_confirmation_count INTEGER DEFAULT 0,
+                    user_notes TEXT,
+                    FOREIGN KEY (group_id) REFERENCES groups (id),
+                    UNIQUE(contract_address, chat_id)  -- Same token can be tracked in different groups
                 )
             ''')
             
-            # Add new column if it doesn't exist
-            try:
-                await db.execute('ALTER TABLE tokens ADD COLUMN loss_alerts_sent TEXT DEFAULT "[]"')
-            except aiosqlite.OperationalError:
-                # Column already exists
-                pass
+            # Migration: Add new columns if they don't exist
+            new_columns = [
+                ('group_id', 'INTEGER'),
+                ('source_api', 'TEXT DEFAULT "dexscreener"'),
+                ('dex_name', 'TEXT'),
+                ('pair_address', 'TEXT'),
+                ('liquidity_usd', 'REAL DEFAULT 0'),
+                ('volume_24h', 'REAL DEFAULT 0'),
+                ('price_change_24h', 'REAL DEFAULT 0'),
+                ('user_notes', 'TEXT'),
+                ('loss_alerts_sent', 'TEXT DEFAULT "[]"')
+            ]
+            
+            for column_name, column_type in new_columns:
+                try:
+                    await db.execute(f'ALTER TABLE tokens ADD COLUMN {column_name} {column_type}')
+                except aiosqlite.OperationalError:
+                    # Column already exists
+                    pass
             
             await db.execute('''
                 CREATE TABLE IF NOT EXISTS alerts (
@@ -55,38 +90,95 @@ class Database:
                     multiplier REAL,
                     alerted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                     chat_id INTEGER,
-                    FOREIGN KEY (token_id) REFERENCES tokens (id)
+                    group_id INTEGER,
+                    FOREIGN KEY (token_id) REFERENCES tokens (id),
+                    FOREIGN KEY (group_id) REFERENCES groups (id)
                 )
             ''')
             
             await db.execute('''
-                CREATE INDEX IF NOT EXISTS idx_tokens_contract ON tokens(contract_address)
+                CREATE INDEX IF NOT EXISTS idx_tokens_contract_chat ON tokens(contract_address, chat_id)
             ''')
             
             await db.execute('''
                 CREATE INDEX IF NOT EXISTS idx_tokens_active ON tokens(is_active)
             ''')
             
+            await db.execute('''
+                CREATE INDEX IF NOT EXISTS idx_tokens_chat ON tokens(chat_id)
+            ''')
+            
+            await db.execute('''
+                CREATE INDEX IF NOT EXISTS idx_groups_chat ON groups(chat_id)
+            ''')
+            
+            await db.commit()
+    
+    async def register_group(self, chat_id: int, chat_title: Optional[str] = None, chat_type: str = 'private') -> int:
+        """Register a new group/chat for tracking."""
+        async with aiosqlite.connect(self.db_path) as db:
+            cursor = await db.execute('''
+                INSERT OR REPLACE INTO groups (chat_id, chat_title, chat_type)
+                VALUES (?, ?, ?)
+            ''', (chat_id, chat_title or f"Chat {chat_id}", chat_type))
+            await db.commit()
+            return cursor.lastrowid or 0
+    
+    async def get_group_settings(self, chat_id: int) -> Dict:
+        """Get group-specific settings."""
+        async with aiosqlite.connect(self.db_path) as db:
+            cursor = await db.execute('''
+                SELECT settings FROM groups WHERE chat_id = ?
+            ''', (chat_id,))
+            row = await cursor.fetchone()
+            if row:
+                try:
+                    return json.loads(row[0])
+                except json.JSONDecodeError:
+                    return {}
+            return {}
+    
+    async def update_group_settings(self, chat_id: int, settings: Dict):
+        """Update group-specific settings."""
+        async with aiosqlite.connect(self.db_path) as db:
+            await db.execute('''
+                UPDATE groups SET settings = ? WHERE chat_id = ?
+            ''', (json.dumps(settings), chat_id))
             await db.commit()
     
     async def add_token(self, contract_address: str, symbol: str, name: str, 
                        initial_mcap: float, initial_price: float, chat_id: int, 
-                       message_id: int = None, platform: str = None) -> int:
-        """Add a new token to tracking with initial market cap"""
+                       message_id: Optional[int] = None, platform: Optional[str] = None,
+                       source_api: str = 'dexscreener', dex_name: Optional[str] = None,
+                       pair_address: Optional[str] = None, liquidity_usd: float = 0,
+                       volume_24h: float = 0, price_change_24h: float = 0) -> int:
+        """Add a new token to tracking with comprehensive data"""
         async with aiosqlite.connect(self.db_path) as db:
+            # Get or create group
+            group_cursor = await db.execute('''
+                SELECT id FROM groups WHERE chat_id = ?
+            ''', (chat_id,))
+            group_row = await group_cursor.fetchone()
+            group_id = group_row[0] if group_row else None
+            
+            if not group_id:
+                group_id = await self.register_group(chat_id)
+            
             cursor = await db.execute('''
                 INSERT OR REPLACE INTO tokens 
                 (contract_address, symbol, name, initial_mcap, current_mcap, 
                  initial_price, current_price, lowest_mcap, lowest_price,
-                 highest_mcap, highest_price, chat_id, message_id, platform,
+                 highest_mcap, highest_price, chat_id, group_id, message_id, platform,
+                 source_api, dex_name, pair_address, liquidity_usd, volume_24h, price_change_24h,
                  confirmed_scan_mcap, scan_confirmation_count)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             ''', (contract_address, symbol, name, initial_mcap, initial_mcap,
                   initial_price, initial_price, initial_mcap, initial_price,
-                  initial_mcap, initial_price, chat_id, message_id, platform,
+                  initial_mcap, initial_price, chat_id, group_id, message_id, platform,
+                  source_api, dex_name, pair_address, liquidity_usd, volume_24h, price_change_24h,
                   initial_mcap, 1))
             await db.commit()
-            return cursor.lastrowid
+            return cursor.lastrowid or 0
     
     async def update_token_price(self, contract_address: str, current_mcap: float, 
                                 current_price: float):
@@ -156,14 +248,109 @@ class Database:
             row = await cursor.fetchone()
             return dict(row) if row else None
     
-    async def add_alert(self, token_id: int, alert_type: str, chat_id: int, multiplier: float = None):
+    async def add_alert(self, token_id: int, alert_type: str, chat_id: int, multiplier: Optional[float] = None):
         """Record an alert that was sent"""
         async with aiosqlite.connect(self.db_path) as db:
+            # Get group_id
+            group_cursor = await db.execute('''
+                SELECT id FROM groups WHERE chat_id = ?
+            ''', (chat_id,))
+            group_row = await group_cursor.fetchone()
+            group_id = group_row[0] if group_row else None
+            
             await db.execute('''
-                INSERT INTO alerts (token_id, alert_type, multiplier, chat_id)
-                VALUES (?, ?, ?, ?)
-            ''', (token_id, alert_type, multiplier, chat_id))
+                INSERT INTO alerts (token_id, alert_type, multiplier, chat_id, group_id)
+                VALUES (?, ?, ?, ?, ?)
+            ''', (token_id, alert_type, multiplier, chat_id, group_id))
             await db.commit()
+    
+    async def get_tokens_for_chat(self, chat_id: int, active_only: bool = True) -> List[Dict]:
+        """Get all tokens tracked in a specific chat/group"""
+        async with aiosqlite.connect(self.db_path) as db:
+            db.row_factory = aiosqlite.Row
+            where_clause = "WHERE t.chat_id = ?"
+            params = [chat_id]
+            
+            if active_only:
+                where_clause += " AND t.is_active = TRUE"
+            
+            cursor = await db.execute(f'''
+                SELECT t.*, g.chat_title, g.chat_type
+                FROM tokens t
+                LEFT JOIN groups g ON t.group_id = g.id
+                {where_clause}
+                ORDER BY t.detected_at DESC
+            ''', params)
+            rows = await cursor.fetchall()
+            return [dict(row) for row in rows]
+    
+    async def remove_token(self, contract_address: str, chat_id: int) -> bool:
+        """Remove a token from tracking for a specific chat"""
+        async with aiosqlite.connect(self.db_path) as db:
+            cursor = await db.execute('''
+                UPDATE tokens SET is_active = FALSE 
+                WHERE contract_address = ? AND chat_id = ?
+            ''', (contract_address, chat_id))
+            await db.commit()
+            return cursor.rowcount > 0
+    
+    async def permanently_delete_token(self, contract_address: str, chat_id: int) -> bool:
+        """Permanently delete a token from tracking for a specific chat"""
+        async with aiosqlite.connect(self.db_path) as db:
+            cursor = await db.execute('''
+                DELETE FROM tokens 
+                WHERE contract_address = ? AND chat_id = ?
+            ''', (contract_address, chat_id))
+            await db.commit()
+            return cursor.rowcount > 0
+    
+    async def get_token_stats(self, chat_id: int) -> Dict:
+        """Get token tracking statistics for a chat"""
+        async with aiosqlite.connect(self.db_path) as db:
+            cursor = await db.execute('''
+                SELECT 
+                    COUNT(*) as total_tokens,
+                    COUNT(CASE WHEN is_active = TRUE THEN 1 END) as active_tokens,
+                    COUNT(CASE WHEN current_mcap > initial_mcap THEN 1 END) as pumping_tokens,
+                    COUNT(CASE WHEN current_mcap < initial_mcap THEN 1 END) as dumping_tokens,
+                    AVG(current_mcap / initial_mcap) as avg_multiplier,
+                    MAX(current_mcap / initial_mcap) as max_multiplier
+                FROM tokens 
+                WHERE chat_id = ?
+            ''', (chat_id,))
+            row = await cursor.fetchone()
+            
+            if row:
+                return {
+                    'total_tokens': row[0] or 0,
+                    'active_tokens': row[1] or 0,
+                    'pumping_tokens': row[2] or 0,
+                    'dumping_tokens': row[3] or 0,
+                    'avg_multiplier': round(row[4] or 1.0, 2),
+                    'max_multiplier': round(row[5] or 1.0, 2)
+                }
+            return {
+                'total_tokens': 0,
+                'active_tokens': 0,
+                'pumping_tokens': 0,
+                'dumping_tokens': 0,
+                'avg_multiplier': 1.0,
+                'max_multiplier': 1.0
+            }
+    
+    async def search_tokens(self, chat_id: int, query: str) -> List[Dict]:
+        """Search tokens by symbol, name, or contract address"""
+        async with aiosqlite.connect(self.db_path) as db:
+            db.row_factory = aiosqlite.Row
+            search_pattern = f"%{query}%"
+            cursor = await db.execute('''
+                SELECT * FROM tokens 
+                WHERE chat_id = ? AND is_active = TRUE 
+                AND (symbol LIKE ? OR name LIKE ? OR contract_address LIKE ?)
+                ORDER BY detected_at DESC
+            ''', (chat_id, search_pattern, search_pattern, search_pattern))
+            rows = await cursor.fetchall()
+            return [dict(row) for row in rows]
     
     async def update_multipliers_alerted(self, contract_address: str, multipliers: List[float]):
         """Update the list of multipliers that have been alerted for a token"""
@@ -222,22 +409,3 @@ class Database:
                 UPDATE tokens SET is_active = FALSE WHERE contract_address = ?
             ''', (contract_address,))
             await db.commit()
-    
-    async def get_token_stats(self) -> Dict:
-        """Get database statistics"""
-        async with aiosqlite.connect(self.db_path) as db:
-            cursor = await db.execute('''
-                SELECT 
-                    COUNT(*) as total_tokens,
-                    COUNT(CASE WHEN is_active = TRUE THEN 1 END) as active_tokens,
-                    COUNT(DISTINCT chat_id) as unique_chats,
-                    COUNT(CASE WHEN loss_50_alerted = TRUE THEN 1 END) as tokens_with_50_loss
-                FROM tokens
-            ''')
-            row = await cursor.fetchone()
-            return {
-                'total_tokens': row[0] if row else 0,
-                'active_tokens': row[1] if row else 0,
-                'unique_chats': row[2] if row else 0,
-                'tokens_with_50_loss': row[3] if row else 0
-            }
