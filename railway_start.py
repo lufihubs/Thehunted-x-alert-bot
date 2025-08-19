@@ -27,6 +27,21 @@ def setup_railway_environment():
     logger = logging.getLogger(__name__)
     logger.info("🚀 Starting Telegram Solana Alert Bot on Railway...")
     
+    # Enhanced error catching for Railway
+    try:
+        # Check Python version
+        logger.info(f"🐍 Python version: {sys.version}")
+        logger.info(f"📁 Working directory: {os.getcwd()}")
+        
+        # List some files to verify deployment
+        try:
+            files = os.listdir('.')[:10]  # First 10 files
+            logger.info(f"📂 Sample files: {files}")
+        except Exception as e:
+            logger.error(f"Error listing files: {e}")
+    except Exception as e:
+        logger.error(f"Error during startup diagnostics: {e}")
+    
     # Check required environment variables
     token = os.getenv('TELEGRAM_BOT_TOKEN')
     if not token:
