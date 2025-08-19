@@ -21,6 +21,11 @@ wheels/
 *.egg
 MANIFEST
 
+# Docker files (Railway will use nixpacks instead)
+Dockerfile
+Dockerfile.*
+.dockerignore
+
 # Virtual environments
 .env
 .venv
