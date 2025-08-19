@@ -28,24 +28,20 @@ def setup_railway_environment():
     logger.info("🚀 Starting Telegram Solana Alert Bot on Railway...")
     
     # Check required environment variables
-    required_vars = ['TELEGRAM_BOT_TOKEN']
-    missing_vars = []
-    
-    for var in required_vars:
-        if not os.getenv(var):
-            missing_vars.append(var)
-    
-    if missing_vars:
-        logger.error(f"❌ Missing required environment variables: {missing_vars}")
-        logger.error("Please set these in your Railway dashboard:")
-        for var in missing_vars:
-            logger.error(f"  - {var}")
+    token = os.getenv('TELEGRAM_BOT_TOKEN')
+    if not token:
+        logger.error("❌ TELEGRAM_BOT_TOKEN environment variable is required!")
+        logger.error("🔧 Fix: In Railway dashboard → Variables tab → Add:")
+        logger.error("   Variable: TELEGRAM_BOT_TOKEN")
+        logger.error("   Value: 8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ")
+        logger.error("🔄 Railway will auto-redeploy after adding the variable")
         sys.exit(1)
     
     # Log configuration
     logger.info("✅ Environment variables configured")
     logger.info(f"📊 Database path: {os.getenv('DATABASE_PATH', 'tokens.db')}")
-    logger.info(f"🔑 Bot token: {'✅ Configured' if os.getenv('TELEGRAM_BOT_TOKEN') else '❌ Missing'}")
+    logger.info(f"🔑 Bot token: ✅ Configured")
+    logger.info(f"🌐 Port: {os.getenv('PORT', '8000')}")
     
     return logger
 
