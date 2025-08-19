@@ -32921,3 +32921,20 @@ telegram.error.Conflict: Conflict: terminated by other getUpdates request; make 
 2025-08-20 01:45:05,668 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
 2025-08-20 01:45:05,977 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
 2025-08-20 01:45:06,884 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:45:17,054 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:45:21,025 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:45:21,682 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:45:21,706 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:45:21,878 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:45:21,899 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:45:22,080 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:45:22,114 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:45:22,293 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:45:22,320 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:45:22,501 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:45:22,521 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:45:22,708 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:45:22,746 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:45:22,967 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:45:22,987 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:45:23,180 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
