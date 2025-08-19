@@ -409,3 +409,173 @@ class Database:
                 UPDATE tokens SET is_active = FALSE WHERE contract_address = ?
             ''', (contract_address,))
             await db.commit()
+    
+    async def get_all_active_tokens_by_group(self) -> Dict[int, List[Dict]]:
+        """Get all active tokens organized by group (chat_id) for multi-group support"""
+        async with aiosqlite.connect(self.db_path) as db:
+            db.row_factory = aiosqlite.Row
+            cursor = await db.execute('''
+                SELECT t.*, g.chat_title, g.chat_type
+                FROM tokens t
+                LEFT JOIN groups g ON t.group_id = g.id
+                WHERE t.is_active = TRUE
+                ORDER BY t.chat_id, t.detected_at DESC
+            ''')
+            
+            rows = await cursor.fetchall()
+            tokens_by_group = {}
+            
+            for row in rows:
+                token_dict = dict(row)
+                chat_id = token_dict['chat_id']
+                
+                if chat_id not in tokens_by_group:
+                    tokens_by_group[chat_id] = []
+                tokens_by_group[chat_id].append(token_dict)
+            
+            return tokens_by_group
+    
+    async def auto_remove_rugged_tokens(self, threshold: float = -80.0) -> List[Dict]:
+        """Auto-remove tokens that have dropped below the threshold"""
+        removed_tokens = []
+        
+        async with aiosqlite.connect(self.db_path) as db:
+            # Find tokens that should be auto-removed
+            cursor = await db.execute('''
+                SELECT id, contract_address, symbol, name, chat_id, 
+                       initial_mcap, current_mcap, confirmed_scan_mcap
+                FROM tokens 
+                WHERE is_active = TRUE 
+                AND current_mcap IS NOT NULL
+                AND current_mcap > 0
+                AND (
+                    (confirmed_scan_mcap IS NOT NULL AND confirmed_scan_mcap > 0 AND 
+                     (current_mcap - confirmed_scan_mcap) / confirmed_scan_mcap * 100 <= ?) OR
+                    (confirmed_scan_mcap IS NULL AND initial_mcap > 0 AND 
+                     (current_mcap - initial_mcap) / initial_mcap * 100 <= ?)
+                )
+            ''', (threshold, threshold))
+            
+            rugged_tokens = await cursor.fetchall()
+            
+            for token in rugged_tokens:
+                token_id, contract_address, symbol, name, chat_id, initial_mcap, current_mcap, confirmed_mcap = token
+                
+                # Calculate actual loss percentage
+                baseline = confirmed_mcap if confirmed_mcap and confirmed_mcap > 0 else initial_mcap
+                loss_percentage = ((current_mcap - baseline) / baseline * 100) if baseline > 0 else -100
+                
+                # Mark token as inactive (auto-removed)
+                await db.execute('''
+                    UPDATE tokens 
+                    SET is_active = FALSE, 
+                        user_notes = COALESCE(user_notes, '') || ' [AUTO-REMOVED: ' || ? || '% loss]'
+                    WHERE id = ?
+                ''', (round(loss_percentage, 1), token_id))
+                
+                removed_tokens.append({
+                    'contract_address': contract_address,
+                    'symbol': symbol,
+                    'name': name,
+                    'chat_id': chat_id,
+                    'loss_percentage': loss_percentage,
+                    'current_mcap': current_mcap,
+                    'baseline_mcap': baseline
+                })
+            
+            await db.commit()
+        
+        return removed_tokens
+    
+    async def check_zero_liquidity_tokens(self) -> List[Dict]:
+        """Find tokens with zero or very low liquidity for removal"""
+        zero_liquidity_tokens = []
+        
+        async with aiosqlite.connect(self.db_path) as db:
+            cursor = await db.execute('''
+                SELECT id, contract_address, symbol, name, chat_id, 
+                       liquidity_usd, current_mcap
+                FROM tokens 
+                WHERE is_active = TRUE 
+                AND (liquidity_usd IS NULL OR liquidity_usd < 100)
+                AND current_mcap < 1000
+            ''')
+            
+            rows = await cursor.fetchall()
+            
+            for row in rows:
+                token_id, contract_address, symbol, name, chat_id, liquidity_usd, current_mcap = row
+                
+                # Mark as inactive due to zero liquidity
+                await db.execute('''
+                    UPDATE tokens 
+                    SET is_active = FALSE, 
+                        user_notes = COALESCE(user_notes, '') || ' [AUTO-REMOVED: Zero liquidity/Low mcap]'
+                    WHERE id = ?
+                ''', (token_id,))
+                
+                zero_liquidity_tokens.append({
+                    'contract_address': contract_address,
+                    'symbol': symbol,
+                    'name': name,
+                    'chat_id': chat_id,
+                    'liquidity_usd': liquidity_usd or 0,
+                    'current_mcap': current_mcap or 0
+                })
+            
+            await db.commit()
+        
+        return zero_liquidity_tokens
+    
+    async def get_group_statistics(self, chat_id: int) -> Dict:
+        """Get statistics for a specific group"""
+        async with aiosqlite.connect(self.db_path) as db:
+            # Total tokens
+            cursor = await db.execute('''
+                SELECT COUNT(*) FROM tokens WHERE chat_id = ? AND is_active = TRUE
+            ''', (chat_id,))
+            result = await cursor.fetchone()
+            total_active = result[0] if result else 0
+            
+            # Tokens with gains
+            cursor = await db.execute('''
+                SELECT COUNT(*) FROM tokens 
+                WHERE chat_id = ? AND is_active = TRUE 
+                AND current_mcap > COALESCE(confirmed_scan_mcap, initial_mcap)
+            ''', (chat_id,))
+            result = await cursor.fetchone()
+            gaining_tokens = result[0] if result else 0
+            
+            # Tokens with losses
+            cursor = await db.execute('''
+                SELECT COUNT(*) FROM tokens 
+                WHERE chat_id = ? AND is_active = TRUE 
+                AND current_mcap < COALESCE(confirmed_scan_mcap, initial_mcap)
+            ''', (chat_id,))
+            result = await cursor.fetchone()
+            losing_tokens = result[0] if result else 0
+            
+            # Total removed tokens
+            cursor = await db.execute('''
+                SELECT COUNT(*) FROM tokens WHERE chat_id = ? AND is_active = FALSE
+            ''', (chat_id,))
+            result = await cursor.fetchone()
+            removed_tokens = result[0] if result else 0
+            
+            return {
+                'total_active': total_active,
+                'gaining_tokens': gaining_tokens,
+                'losing_tokens': losing_tokens,
+                'removed_tokens': removed_tokens,
+                'chat_id': chat_id
+            }
+    
+    async def update_loss_alerts_sent(self, contract_address: str, loss_thresholds: List[float]):
+        """Update the loss alerts that have been sent for a token."""
+        async with aiosqlite.connect(self.db_path) as db:
+            await db.execute('''
+                UPDATE tokens 
+                SET loss_alerts_sent = ?
+                WHERE contract_address = ?
+            ''', (json.dumps(loss_thresholds), contract_address))
+            await db.commit()

@@ -71,20 +71,25 @@ class SolanaAlertBot:
         await self.database.register_group(chat_id, chat_title, chat_type)
         
         welcome_message = (
-            "🚀 *Enhanced Solana Token Alert Bot* 🚀\n\n"
+            "🚀 *Enhanced Multi-Group Solana Alert Bot* 🚀\n\n"
             "🔍 *Perfect Token Detection* - Never miss a launch!\n"
             "📊 *DexScreener Integration* - Real-time accurate data\n"
-            "👥 *Group-Specific Tracking* - Each group has its own tokens\n"
-            "⚡ *Lightning Fast* - 15-second monitoring intervals\n\n"
+            "👥 *Multi-Group Support* - Each group has independent tokens\n"
+            "⚡ *Real-Time Monitoring* - 10-second intervals\n"
+            "🗑️ *Auto-Remove Rugged* - Removes tokens below -80%\n\n"
+            f"📋 *Group Info:*\n"
+            f"• **Chat ID**: `{chat_id}`\n"
+            f"• **Type**: {chat_type.title()}\n"
+            f"• **Title**: {chat_title}\n\n"
             "📋 *Quick Commands:*\n"
             "• `/menu` - Access all features\n"
-            "• `/list` - View tracked tokens\n"
+            "• `/list` - View this group's tokens\n"
             "• `/stats` - Group statistics\n"
             "• Send any Solana contract address to start tracking!\n\n"
             "🎯 *Alert Types:*\n"
             "🚀 Multiplier alerts: 2x, 3x, 5x, 8x, 10x, up to 100x!\n"
-            "📉 Loss alerts: -50%, -70%, -85%, -95%\n"
-            "💎 Perfect detection of all Solana tokens\n\n"
+            "📉 Loss alerts: -30%, -50%, -70%, -80%, -85%, -95%\n"
+            "�️ Auto-removal at -80% loss\n\n"
             "🔥 *Ready to catch some moonshots!* 🔥"
         )
         
@@ -92,7 +97,8 @@ class SolanaAlertBot:
         keyboard = [
             [InlineKeyboardButton("📋 Main Menu", callback_data="menu_main")],
             [InlineKeyboardButton("📊 View Tokens", callback_data="menu_list"),
-             InlineKeyboardButton("📈 Statistics", callback_data="menu_stats")]
+             InlineKeyboardButton("📈 Statistics", callback_data="menu_stats")],
+            [InlineKeyboardButton("🗑️ Auto-Remove Info", callback_data="menu_autoremove")]
         ]
         reply_markup = InlineKeyboardMarkup(keyboard)
         
