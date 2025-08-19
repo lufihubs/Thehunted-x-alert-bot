@@ -32938,3 +32938,721 @@ telegram.error.Conflict: Conflict: terminated by other getUpdates request; make 
 2025-08-20 01:45:22,967 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
 2025-08-20 01:45:22,987 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
 2025-08-20 01:45:23,180 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:45:27,230 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:45:37,424 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:45:38,252 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:45:38,748 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:45:38,801 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:45:39,118 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:45:39,150 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:45:39,472 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:45:39,537 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:45:40,154 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:45:40,183 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:45:40,466 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:45:40,491 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:45:40,852 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:45:40,907 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:45:41,208 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:45:41,232 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:45:42,206 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:45:47,601 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:45:57,268 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:45:57,922 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:45:57,949 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:45:58,130 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:45:58,149 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:45:58,348 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:45:58,369 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:45:58,554 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:45:58,576 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:45:58,758 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:45:58,780 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:45:59,154 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:45:59,159 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:45:59,193 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:45:59,385 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:45:59,407 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:45:59,606 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:46:09,348 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:46:14,638 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:46:15,210 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:46:15,241 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:46:15,556 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:46:15,623 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:46:15,913 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:46:15,942 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:46:16,265 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:46:16,300 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:46:16,509 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:46:16,566 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:46:16,933 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:46:16,959 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:46:17,280 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:46:17,306 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:46:17,659 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:46:19,669 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:46:29,859 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:46:32,706 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:46:33,732 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:46:33,757 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:46:34,098 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:46:34,130 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:46:34,487 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:46:34,521 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:46:34,722 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:46:34,751 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:46:34,935 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:46:34,960 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:46:35,134 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:46:35,172 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:46:35,366 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:46:35,388 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:46:35,572 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:46:40,047 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:46:50,229 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:46:50,602 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:46:51,094 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:46:51,128 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:46:51,653 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:46:51,680 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:46:51,954 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:46:51,977 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:46:52,321 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:46:52,354 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:46:52,640 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:46:52,769 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:46:53,131 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:46:53,144 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:46:53,490 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:46:53,516 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:46:53,842 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:47:00,475 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:47:08,898 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:47:09,707 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:47:09,733 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:47:09,962 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:47:09,988 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:47:10,178 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:47:10,409 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:47:10,613 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:47:10,643 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:47:10,671 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:47:10,941 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:47:10,971 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:47:11,191 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:47:11,221 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:47:11,413 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:47:11,436 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:47:11,616 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:47:20,809 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:47:26,659 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:47:27,187 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:47:27,222 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:47:27,695 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:47:27,723 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:47:28,065 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:47:28,089 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:47:28,445 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:47:28,497 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:47:28,821 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:47:28,856 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:47:29,376 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:47:29,405 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:47:29,888 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:47:29,919 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:47:30,236 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:47:30,990 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:47:41,167 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:47:45,268 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:47:45,961 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:47:45,983 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:47:46,180 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:47:46,209 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:47:46,433 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:47:46,463 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:47:46,681 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:47:46,713 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:47:46,908 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:47:46,941 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:47:47,170 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:47:47,207 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:47:47,409 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:47:47,454 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:47:47,658 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:47:51,345 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:48:01,528 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:48:02,680 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:48:03,234 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:48:03,261 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:48:03,745 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:48:03,785 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:48:04,255 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:48:04,283 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:48:04,832 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:48:04,850 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:48:05,151 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:48:05,188 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:48:05,539 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:48:05,571 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:48:05,876 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:48:05,901 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:48:06,214 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:48:11,693 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:48:21,262 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:48:21,858 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:48:21,948 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:48:21,967 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:48:22,132 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:48:22,158 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:48:22,334 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:48:22,367 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:48:22,544 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:48:22,575 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:48:22,742 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:48:22,762 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:48:22,941 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:48:22,958 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:48:23,146 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:48:23,172 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:48:23,349 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:48:32,032 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:48:38,373 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:48:38,993 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:48:39,023 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:48:39,473 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:48:39,525 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:48:39,806 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:48:39,837 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:48:40,210 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:48:40,247 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:48:40,558 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:48:40,584 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:48:40,928 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:48:40,945 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:48:41,294 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:48:41,324 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:48:41,714 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:48:42,208 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:48:52,422 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:48:56,762 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:48:57,363 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:48:57,398 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:48:57,640 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:48:57,685 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:48:57,888 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:48:57,919 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:48:58,113 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:48:58,140 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:48:58,414 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:48:58,450 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:48:58,643 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:48:58,678 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:48:58,866 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:48:58,894 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:48:59,083 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:49:02,585 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:49:12,766 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:49:14,120 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:49:14,680 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:49:14,708 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:49:15,220 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:49:15,253 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:49:15,524 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:49:15,541 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:49:15,864 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:49:15,894 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:49:16,198 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:49:16,229 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:49:16,583 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:49:16,613 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:49:17,061 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:49:17,086 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:49:17,418 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:49:22,934 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:49:32,460 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:49:33,028 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:49:33,065 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:49:33,117 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:49:33,302 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:49:33,334 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:49:33,526 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:49:33,545 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:49:33,731 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:49:33,747 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:49:33,937 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:49:33,966 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:49:34,146 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:49:34,175 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:49:34,358 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:49:34,384 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:49:34,583 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:49:43,297 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:49:49,605 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:49:50,429 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:49:50,445 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:49:51,050 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:49:51,083 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:49:51,392 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:49:51,413 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:49:51,765 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:49:51,799 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:49:52,241 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:49:52,267 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:49:52,674 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:49:52,714 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:49:53,200 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:49:53,219 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:49:53,460 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:49:53,592 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:50:04,013 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:50:08,625 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:50:09,158 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:50:09,201 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:50:09,398 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:50:09,424 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:50:09,602 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:50:09,676 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:50:09,875 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:50:09,889 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:50:10,076 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:50:10,105 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:50:10,300 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:50:10,326 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:50:10,590 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:50:10,606 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:50:10,791 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:50:14,181 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:50:24,411 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:50:25,830 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:50:26,371 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:50:26,397 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:50:26,895 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:50:26,911 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:50:27,244 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:50:27,264 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:50:27,643 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:50:27,677 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:50:27,976 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:50:27,995 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:50:28,401 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:50:28,430 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:50:28,891 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:50:28,914 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:50:29,237 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:50:34,601 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:50:44,285 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:50:44,777 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:50:44,882 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:50:44,900 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:50:45,084 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:50:45,101 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:50:45,301 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:50:45,320 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:50:45,501 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:50:45,518 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:50:45,710 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:50:45,729 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:50:45,914 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:50:45,932 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:50:46,125 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:50:46,152 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:50:46,423 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:50:54,937 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:51:01,481 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:51:02,017 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:51:02,056 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:51:02,431 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:51:02,456 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:51:02,743 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:51:02,785 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:51:03,108 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:51:03,159 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:51:03,451 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:51:03,470 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:51:03,841 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:51:03,882 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:51:04,203 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:51:04,237 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:51:04,432 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:51:05,118 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:51:15,357 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:51:19,468 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:51:20,507 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:51:20,534 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:51:20,713 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:51:20,732 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:51:20,910 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:51:20,942 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:51:21,129 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:51:21,145 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:51:21,307 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:51:21,327 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:51:21,488 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:51:21,513 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:51:21,698 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:51:21,721 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:51:21,907 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:51:25,813 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:51:35,998 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:51:36,950 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:51:37,552 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:51:37,597 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:51:38,037 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:51:38,074 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:51:38,503 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:51:38,539 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:51:38,885 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:51:38,909 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:51:39,231 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:51:39,261 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:51:39,604 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:51:39,637 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:51:39,920 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:51:39,949 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:51:40,246 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:51:46,568 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:51:55,291 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:51:56,336 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:51:56,362 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:51:56,538 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:51:56,565 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:51:56,734 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:51:56,739 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:51:56,769 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:51:56,951 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:51:56,966 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:51:57,290 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:51:57,318 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:51:57,531 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:51:57,561 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:51:57,730 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:51:57,745 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:51:59,135 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:52:07,109 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:52:14,168 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:52:15,212 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:52:15,238 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:52:15,838 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:52:15,856 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:52:16,621 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:52:16,668 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:52:17,012 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:52:17,037 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:52:17,281 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:52:17,357 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:52:17,395 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:52:17,920 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:52:17,988 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:52:18,342 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:52:18,363 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:52:18,749 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:52:28,006 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:52:33,806 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:52:34,815 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:52:34,843 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:52:35,040 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:52:35,071 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:52:35,513 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:52:35,544 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:52:35,764 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:52:35,783 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:52:35,973 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:52:36,000 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:52:36,181 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:52:36,207 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:52:36,419 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:52:36,447 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:52:36,903 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:52:38,524 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:52:48,868 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:52:51,937 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:52:53,184 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:52:53,210 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:52:53,515 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:52:53,541 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:52:54,513 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:52:54,540 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:52:55,427 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:52:55,455 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:52:56,070 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:52:56,095 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:52:56,946 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:52:56,977 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:52:57,465 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:52:57,509 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:52:57,888 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:52:59,104 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:53:09,286 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:53:12,924 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:53:13,593 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:53:13,617 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:53:13,810 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:53:13,830 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:53:14,014 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:53:14,040 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:53:14,237 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:53:14,259 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:53:14,456 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:53:14,494 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:53:14,676 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:53:14,691 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:53:14,896 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:53:14,911 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:53:15,089 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:53:19,459 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:53:29,627 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:53:30,123 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:53:30,756 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:53:30,783 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:53:31,217 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:53:31,249 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:53:31,559 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:53:31,593 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:53:31,917 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:53:31,953 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:53:32,190 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:53:32,221 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:53:32,584 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:53:32,619 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:53:32,940 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:53:32,970 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:53:33,881 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:53:39,787 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:53:48,908 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:53:49,685 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:53:49,712 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:53:49,898 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:53:49,926 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:53:49,952 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:53:50,119 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:53:50,140 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:53:50,320 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:53:50,335 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:53:50,536 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:53:50,565 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:53:50,750 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:53:50,778 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:53:50,972 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:53:50,990 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:53:51,198 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:54:00,121 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:54:06,225 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:54:06,748 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:54:06,772 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:54:07,097 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:54:07,158 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:54:07,660 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:54:07,687 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:54:08,256 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:54:08,293 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:54:08,681 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:54:08,712 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:54:09,273 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:54:09,312 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:54:09,619 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:54:09,665 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:54:09,868 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:54:10,301 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:54:20,484 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:54:24,915 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:54:25,470 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:54:25,511 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:54:25,687 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:54:25,715 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:54:25,913 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:54:25,952 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:54:26,151 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:54:26,188 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:54:26,378 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:54:26,404 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:54:26,638 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:54:26,668 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:54:26,858 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:54:26,881 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:54:27,078 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:54:30,648 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:54:40,842 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:54:42,114 - solana_api - INFO - 🔍 Fetching token data for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:54:42,620 - solana_api - INFO - ✅ DexScreener data found for F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump
+2025-08-20 01:54:42,649 - solana_api - INFO - 🔍 Fetching token data for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:54:42,936 - solana_api - INFO - ✅ DexScreener data found for 7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk
+2025-08-20 01:54:42,960 - solana_api - INFO - 🔍 Fetching token data for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:54:43,242 - solana_api - INFO - ✅ DexScreener data found for CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump
+2025-08-20 01:54:43,267 - solana_api - INFO - 🔍 Fetching token data for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:54:43,596 - solana_api - INFO - ✅ DexScreener data found for GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW
+2025-08-20 01:54:43,619 - solana_api - INFO - 🔍 Fetching token data for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:54:43,815 - solana_api - INFO - ✅ DexScreener data found for 7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump
+2025-08-20 01:54:43,839 - solana_api - INFO - 🔍 Fetching token data for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:54:44,195 - solana_api - INFO - ✅ DexScreener data found for EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump
+2025-08-20 01:54:44,224 - solana_api - INFO - 🔍 Fetching token data for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:54:44,407 - solana_api - INFO - ✅ DexScreener data found for Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777
+2025-08-20 01:54:44,433 - solana_api - INFO - 🔍 Fetching token data for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:54:45,012 - solana_api - INFO - ✅ DexScreener data found for 8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777
+2025-08-20 01:54:51,435 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-20 01:54:52,388 - token_tracker - INFO - ⏹️ Token tracking stopped
+2025-08-20 01:54:52,389 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-08-20 01:54:52,390 - telegram.ext.Application - INFO - Application.stop() complete
+2025-08-20 01:54:52,394 - telegram.ext.Updater - ERROR - Error while getting Updates: httpx.ReadError: 
+2025-08-20 01:54:52,395 - telegram.ext.Updater - ERROR - Exception happened while polling for updates.
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_exceptions.py", line 10, in map_exceptions
+    yield
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 34, in read
+    return await self._stream.receive(max_bytes=max_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\anyio\streams\tls.py", line 237, in receive
+    data = await self._call_sslobject_method(self._ssl_object.read, max_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\anyio\streams\tls.py", line 180, in _call_sslobject_method
+    data = await self.transport_stream.receive()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1263, in receive
+    raise ClosedResourceError from None
+anyio.ClosedResourceError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 60, in map_httpcore_exceptions
+    yield
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 353, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 262, in handle_async_request
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 245, in handle_async_request
+    response = await connection.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 96, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 121, in handle_async_request
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 99, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 164, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 200, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.READ_NUM_BYTES, timeout=timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 31, in read
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 216, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1530, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1617, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1645, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1682, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_client.py", line 1719, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 352, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 77, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 543, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 381, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 3661, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 469, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 325, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 497, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 168, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 291, in _request_wrapper
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 277, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 240, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ReadError: 
