@@ -36,6 +36,20 @@ class Config:
     REAL_TIME_ALERTS: bool = True  # Enable real-time alert processing
     ALERT_COOLDOWN: int = 60  # Seconds between same-type alerts for same token
     
+    # Data persistence and backup settings
+    AUTO_SAVE_INTERVAL: int = 300  # Auto-save every 5 minutes (seconds)
+    BACKUP_ON_START: bool = True  # Create backup when bot starts
+    BACKUP_ON_TOKEN_ADD: bool = True  # Backup when new tokens are added
+    BACKUP_ON_TOKEN_REMOVE: bool = True  # Backup when tokens are removed
+    MAX_BACKUPS: int = 10  # Maximum number of backup files to keep
+    SAVE_ON_SHUTDOWN: bool = True  # Save all data when bot shuts down
+    
+    # Group data persistence
+    PERSIST_GROUP_SETTINGS: bool = True  # Save group-specific settings
+    PERSIST_ALERT_HISTORY: bool = True  # Save alert history across restarts
+    PERSIST_TOKEN_DATA: bool = True  # Save all token tracking data
+    CROSS_SESSION_PERSISTENCE: bool = True  # Maintain data across bot restarts
+    
     # Logging settings
     LOG_LEVEL: str = 'INFO'
     LOG_FILE: str = 'bot.log'

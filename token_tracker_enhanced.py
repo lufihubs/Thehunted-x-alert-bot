@@ -18,6 +18,8 @@ class TokenTracker:
         self.last_alert_time: Dict[str, Dict[int, datetime]] = {}  # contract -> {chat_id -> last_alert_time}
         self.is_running = False
         self.database = Database(Config.DATABASE_PATH)
+        self.last_save_time = datetime.now()
+        self.save_interval = 300  # Auto-save every 5 minutes
         
     async def start_tracking(self):
         """Start the enhanced multi-group token tracking loop."""
@@ -25,25 +27,45 @@ class TokenTracker:
             return
             
         self.is_running = True
-        logger.info("🚀 Enhanced Multi-Group Token tracking started")
+        logger.info("🚀 Enhanced Multi-Group Token tracking started with auto-save")
         
         # Load existing tokens from database organized by group
         await self._load_tokens_by_group()
+        
+        # Create initial backup
+        await self.database.auto_save_on_update()
         
         # Start the tracking loop with real-time monitoring
         while self.is_running:
             try:
                 await self._check_all_groups()
                 await self._auto_remove_rugged_tokens()
+                
+                # Auto-save every 5 minutes
+                if (datetime.now() - self.last_save_time).seconds >= self.save_interval:
+                    await self._auto_save_data()
+                
                 await asyncio.sleep(Config.PRICE_CHECK_INTERVAL)
             except Exception as e:
                 logger.error(f"Error in tracking loop: {e}")
                 await asyncio.sleep(5)  # Shorter retry interval for better real-time response
     
+    async def _auto_save_data(self):
+        """Automatically save all tracking data."""
+        try:
+            await self.database.save_all_group_data()
+            self.last_save_time = datetime.now()
+            logger.info("💾 Auto-saved all group tracking data")
+        except Exception as e:
+            logger.error(f"Error in auto-save: {e}")
+    
     def stop_tracking(self):
-        """Stop the token tracking loop."""
+        """Stop the token tracking loop and save data."""
         self.is_running = False
         logger.info("⏹️ Enhanced Token tracking stopped")
+        
+        # Save data before stopping
+        asyncio.create_task(self._auto_save_data())
     
     async def add_token(self, contract_address: str, chat_id: int, message_id: int) -> bool:
         """Add a new token for tracking in a specific group."""
@@ -107,6 +129,11 @@ class TokenTracker:
                     
                     logger.info(f"✅ Added token {token_info['symbol']} ({contract_address[:8]}...) for group {chat_id}")
                     logger.info(f"💰 Initial market cap: ${token_info['market_cap']:,.2f}")
+                    
+                    # Auto-save after adding new token
+                    await self.database.auto_save_on_update()
+                    logger.info("💾 Auto-saved after adding new token")
+                    
                     return True
                     
         except Exception as e:

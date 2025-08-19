@@ -1,12 +1,203 @@
 ﻿import aiosqlite
 import asyncio
+import json
+import shutil
+import os
 from datetime import datetime
 from typing import List, Dict, Optional
-import json
+from pathlib import Path
 
 class Database:
     def __init__(self, db_path: str):
         self.db_path = db_path
+        self.backup_dir = Path(db_path).parent / "backups"
+        self.backup_dir.mkdir(exist_ok=True)
+        
+    async def create_backup(self) -> str:
+        """Create a backup of the current database."""
+        try:
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            backup_path = self.backup_dir / f"tokens_backup_{timestamp}.db"
+            
+            if os.path.exists(self.db_path):
+                shutil.copy2(self.db_path, backup_path)
+                return str(backup_path)
+            return ""
+        except Exception as e:
+            print(f"Error creating backup: {e}")
+            return ""
+    
+    async def save_all_group_data(self) -> Dict:
+        """Save all group data to ensure persistence across updates."""
+        try:
+            async with aiosqlite.connect(self.db_path) as db:
+                # Save all group information
+                groups_cursor = await db.execute('''
+                    SELECT chat_id, chat_title, chat_type, settings, created_at, is_active
+                    FROM groups WHERE is_active = 1
+                ''')
+                groups_data = await groups_cursor.fetchall()
+                
+                # Save all token information grouped by chat
+                tokens_cursor = await db.execute('''
+                    SELECT * FROM tokens WHERE is_active = 1
+                    ORDER BY chat_id, detected_at
+                ''')
+                tokens_data = await tokens_cursor.fetchall()
+                
+                # Save all alert history
+                alerts_cursor = await db.execute('''
+                    SELECT * FROM alerts
+                    ORDER BY chat_id, alerted_at DESC
+                ''')
+                alerts_data = await alerts_cursor.fetchall()
+                
+                # Organize data by chat_id for easy restoration
+                grouped_data = {}
+                
+                # Process groups
+                for group in groups_data:
+                    chat_id = group[0]
+                    grouped_data[chat_id] = {
+                        'group_info': {
+                            'chat_id': group[0],
+                            'chat_title': group[1],
+                            'chat_type': group[2],
+                            'settings': json.loads(group[3]) if group[3] else {},
+                            'created_at': group[4],
+                            'is_active': group[5]
+                        },
+                        'tokens': [],
+                        'alerts': []
+                    }
+                
+                # Process tokens
+                for token in tokens_data:
+                    chat_id = token[12]  # chat_id is at index 12
+                    if chat_id not in grouped_data:
+                        grouped_data[chat_id] = {'group_info': {}, 'tokens': [], 'alerts': []}
+                    
+                    token_data = {
+                        'id': token[0],
+                        'contract_address': token[1],
+                        'symbol': token[2],
+                        'name': token[3],
+                        'initial_mcap': token[4],
+                        'current_mcap': token[5],
+                        'initial_price': token[6],
+                        'current_price': token[7],
+                        'lowest_mcap': token[8],
+                        'lowest_price': token[9],
+                        'highest_mcap': token[10],
+                        'highest_price': token[11],
+                        'chat_id': token[12],
+                        'group_id': token[13],
+                        'message_id': token[14],
+                        'detected_at': token[15],
+                        'last_updated': token[16],
+                        'is_active': token[17],
+                        'platform': token[18],
+                        'multipliers_alerted': json.loads(token[19]) if token[19] and token[19] != 'NULL' else [],
+                        'loss_alerts_sent': json.loads(token[20]) if token[20] and token[20] != 'NULL' else [],
+                        'confirmed_scan_mcap': token[21],
+                        'scan_confirmation_count': token[22]
+                    }
+                    grouped_data[chat_id]['tokens'].append(token_data)
+                
+                # Process alerts
+                for alert in alerts_data:
+                    chat_id = alert[5]  # chat_id is at index 5
+                    if chat_id in grouped_data:
+                        alert_data = {
+                            'id': alert[0],
+                            'token_id': alert[1],
+                            'alert_type': alert[2],
+                            'multiplier': alert[3],
+                            'alerted_at': alert[4],
+                            'chat_id': alert[5],
+                            'group_id': alert[6]
+                        }
+                        grouped_data[chat_id]['alerts'].append(alert_data)
+                
+                # Save to backup file
+                timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                backup_data_path = self.backup_dir / f"all_group_data_{timestamp}.json"
+                
+                with open(backup_data_path, 'w') as f:
+                    json.dump(grouped_data, f, indent=2, default=str)
+                
+                print(f"💾 All group data saved to: {backup_data_path}")
+                return grouped_data
+                
+        except Exception as e:
+            print(f"Error saving group data: {e}")
+            return {}
+    
+    async def restore_group_data(self, backup_file: str) -> bool:
+        """Restore group data from backup file."""
+        try:
+            with open(backup_file, 'r') as f:
+                grouped_data = json.load(f)
+            
+            async with aiosqlite.connect(self.db_path) as db:
+                for chat_id, data in grouped_data.items():
+                    # Restore group info
+                    if 'group_info' in data and data['group_info']:
+                        group_info = data['group_info']
+                        await db.execute('''
+                            INSERT OR REPLACE INTO groups (chat_id, chat_title, chat_type, settings, is_active)
+                            VALUES (?, ?, ?, ?, ?)
+                        ''', (
+                            group_info['chat_id'],
+                            group_info.get('chat_title', f"Chat {chat_id}"),
+                            group_info.get('chat_type', 'private'),
+                            json.dumps(group_info.get('settings', {})),
+                            group_info.get('is_active', True)
+                        ))
+                    
+                    # Restore tokens
+                    for token in data.get('tokens', []):
+                        await db.execute('''
+                            INSERT OR REPLACE INTO tokens 
+                            (contract_address, symbol, name, initial_mcap, current_mcap,
+                             initial_price, current_price, lowest_mcap, lowest_price,
+                             highest_mcap, highest_price, chat_id, message_id,
+                             detected_at, last_updated, is_active, platform,
+                             multipliers_alerted, loss_alerts_sent, confirmed_scan_mcap,
+                             scan_confirmation_count)
+                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                        ''', (
+                            token['contract_address'], token['symbol'], token['name'],
+                            token['initial_mcap'], token['current_mcap'],
+                            token['initial_price'], token['current_price'],
+                            token['lowest_mcap'], token['lowest_price'],
+                            token['highest_mcap'], token['highest_price'],
+                            token['chat_id'], token.get('message_id'),
+                            token.get('detected_at', datetime.now().isoformat()),
+                            token.get('last_updated', datetime.now().isoformat()),
+                            token.get('is_active', True), token.get('platform'),
+                            json.dumps(token.get('multipliers_alerted', [])),
+                            json.dumps(token.get('loss_alerts_sent', [])),
+                            token.get('confirmed_scan_mcap'), token.get('scan_confirmation_count', 1)
+                        ))
+                
+                await db.commit()
+                print(f"✅ Successfully restored data for {len(grouped_data)} groups")
+                return True
+                
+        except Exception as e:
+            print(f"Error restoring group data: {e}")
+            return False
+    
+    async def auto_save_on_update(self):
+        """Automatically save data when updates are made."""
+        backup_path = await self.create_backup()
+        if backup_path:
+            print(f"🔄 Auto-backup created: {backup_path}")
+        
+        # Save all group data
+        await self.save_all_group_data()
+        print("💾 All group data auto-saved")
         
     async def init_db(self):
         """Initialize the database with enhanced tables for group-specific tracking."""
@@ -292,6 +483,12 @@ class Database:
                 WHERE contract_address = ? AND chat_id = ?
             ''', (contract_address, chat_id))
             await db.commit()
+            
+            # Auto-save after token removal
+            if cursor.rowcount > 0:
+                await self.auto_save_on_update()
+                print(f"💾 Auto-saved after removing token {contract_address[:8]}... from chat {chat_id}")
+            
             return cursor.rowcount > 0
     
     async def permanently_delete_token(self, contract_address: str, chat_id: int) -> bool:
@@ -302,6 +499,12 @@ class Database:
                 WHERE contract_address = ? AND chat_id = ?
             ''', (contract_address, chat_id))
             await db.commit()
+            
+            # Auto-save after permanent deletion
+            if cursor.rowcount > 0:
+                await self.auto_save_on_update()
+                print(f"💾 Auto-saved after permanently deleting token {contract_address[:8]}... from chat {chat_id}")
+            
             return cursor.rowcount > 0
     
     async def get_token_stats(self, chat_id: int) -> Dict:
