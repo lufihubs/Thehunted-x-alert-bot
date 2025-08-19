@@ -172,7 +172,7 @@ class SolanaAlertBot:
         await update.message.reply_text(help_message, parse_mode='Markdown')
     
     async def list_tokens_command(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
-        """Display all tracked tokens for this group."""
+        """Display all tracked tokens for this group with remove commands."""
         if not update.message or not update.effective_chat:
             return
             
@@ -187,7 +187,7 @@ class SolanaAlertBot:
             )
             return
         
-        # Create paginated token list
+        # Create paginated token list with remove commands
         message_parts = []
         current_message = "📊 *Tracked Tokens in This Group* 📊\n\n"
         
@@ -199,15 +199,15 @@ class SolanaAlertBot:
             status_emoji = "🚀" if multiplier > 1 else "📉" if multiplier < 1 else "➖"
             
             token_info = (
-                f"{status_emoji} *{i}. {token['symbol']}*\n"
-                f"📝 {token['name'][:30]}{'...' if len(token['name']) > 30 else ''}\n"
+                f"{status_emoji} *{i}. {token['symbol']}* - {token['name'][:25]}{'...' if len(token['name']) > 25 else ''}\n"
                 f"💰 ${current_mcap:,.0f} ({multiplier:.2f}x)\n"
-                f"🔗 `{token['contract_address'][:8]}...{token['contract_address'][-8:]}`\n"
+                f"🔗 `{token['contract_address']}`\n"
+                f"❌ Remove: `/remove {token['contract_address']}`\n"
                 f"⏰ Added: {token['detected_at'][:10]}\n\n"
             )
             
             # Check if adding this token would exceed message limit
-            if len(current_message + token_info) > 3800:
+            if len(current_message + token_info) > 3500:
                 message_parts.append(current_message)
                 current_message = "📊 *Tracked Tokens (continued)* 📊\n\n" + token_info
             else:
@@ -216,16 +216,25 @@ class SolanaAlertBot:
         if current_message:
             message_parts.append(current_message)
         
+        # Add usage tips to the last message
+        if message_parts:
+            message_parts[-1] += (
+                "💡 *Quick Actions:*\n"
+                "• Copy and send remove commands above\n"
+                "• Use `/search <name>` to find specific tokens\n"
+                "• Use `/menu` for more options"
+            )
+        
         # Send all message parts
-        for part in message_parts:
+        for i, part in enumerate(message_parts):
             keyboard = [
-                [InlineKeyboardButton("❌ Remove Token", callback_data="menu_remove")],
-                [InlineKeyboardButton("🔍 Search Tokens", callback_data="menu_search")],
-                [InlineKeyboardButton("📈 View Stats", callback_data="menu_stats")]
+                [InlineKeyboardButton("🔄 Refresh List", callback_data="menu_list")],
+                [InlineKeyboardButton("� View Stats", callback_data="menu_stats")],
+                [InlineKeyboardButton("🎛️ Main Menu", callback_data="menu_main")]
             ]
             reply_markup = InlineKeyboardMarkup(keyboard)
             
-            await update.message.reply_text(part, parse_mode='Markdown', reply_markup=reply_markup)
+            await update.message.reply_text(part, parse_mode='Markdown', reply_markup=reply_markup if i == len(message_parts) - 1 else None)
     
     async def stats_command(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         """Display group statistics."""
@@ -294,7 +303,7 @@ class SolanaAlertBot:
         
         results_message = f"🔍 *Search Results for: {query}*\n\n"
         
-        for i, token in enumerate(tokens[:10], 1):  # Limit to 10 results
+        for i, token in enumerate(tokens[:5], 1):  # Limit to 5 results for better display
             current_mcap = token.get('current_mcap', 0) or 0
             initial_mcap = token.get('initial_mcap', 1) or 1
             multiplier = current_mcap / initial_mcap if initial_mcap > 0 else 0
@@ -302,15 +311,20 @@ class SolanaAlertBot:
             status_emoji = "🚀" if multiplier > 1 else "📉" if multiplier < 1 else "➖"
             
             results_message += (
-                f"{status_emoji} *{i}. {token['symbol']}*\n"
-                f"📝 {token['name']}\n"
+                f"{status_emoji} *{i}. {token['symbol']}* - {token['name'][:20]}{'...' if len(token['name']) > 20 else ''}\n"
                 f"💰 ${current_mcap:,.0f} ({multiplier:.2f}x)\n"
-                f"🔗 `{token['contract_address']}`\n\n"
+                f"🔗 `{token['contract_address']}`\n"
+                f"❌ Remove: `/remove {token['contract_address']}`\n\n"
             )
         
+        if len(tokens) > 5:
+            results_message += f"... and {len(tokens) - 5} more results\n\n"
+        
+        results_message += "💡 Copy and send remove commands above to remove tokens!"
+        
         keyboard = [
-            [InlineKeyboardButton("❌ Remove Token", callback_data="menu_remove")],
-            [InlineKeyboardButton("📊 View All", callback_data="menu_list")]
+            [InlineKeyboardButton("📊 View All Tokens", callback_data="menu_list")],
+            [InlineKeyboardButton("🎛️ Main Menu", callback_data="menu_main")]
         ]
         reply_markup = InlineKeyboardMarkup(keyboard)
         
@@ -372,19 +386,48 @@ class SolanaAlertBot:
             await self.show_help_info(query)
         elif query.data == "menu_status":
             await self.show_bot_status(query)
+        elif query.data.startswith("remove_"):
+            # Handle remove token button clicks
+            contract_address = query.data[7:]  # Remove "remove_" prefix
+            await self.handle_remove_token_callback(query, contract_address)
         elif query.data == "menu_search":
+            keyboard = [
+                [InlineKeyboardButton("📊 View Tokens", callback_data="menu_list")],
+                [InlineKeyboardButton("🔙 Back to Menu", callback_data="menu_main")]
+            ]
+            reply_markup = InlineKeyboardMarkup(keyboard)
+            
             await query.edit_message_text(
                 "🔍 *Search Tokens*\n\n"
                 "Use the command: `/search <query>`\n\n"
+                "*Examples:*\n"
+                "• `/search BONK` - Find by symbol\n"
+                "• `/search Solana` - Find by name\n"
+                "• `/search 11111111` - Find by address\n\n"
                 "Search by symbol, name, or contract address.",
-                parse_mode='Markdown'
+                parse_mode='Markdown',
+                reply_markup=reply_markup
             )
         elif query.data == "menu_remove":
+            keyboard = [
+                [InlineKeyboardButton("📊 View Tokens", callback_data="menu_list")],
+                [InlineKeyboardButton("🔙 Back to Menu", callback_data="menu_main")]
+            ]
+            reply_markup = InlineKeyboardMarkup(keyboard)
+            
             await query.edit_message_text(
                 "❌ *Remove Token*\n\n"
-                "Use the command: `/remove <contract_address>`\n\n"
-                "Get contract addresses with `/list`.",
-                parse_mode='Markdown'
+                "*Quick Method:*\n"
+                "1. Go to 📊 View Tokens\n"
+                "2. Click the ❌ Remove buttons for each token\n"
+                "3. Confirm removal when prompted!\n\n"
+                "*Manual Method:*\n"
+                "Use: `/remove <contract_address>`\n\n"
+                "*Example:*\n"
+                "`/remove DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263`\n\n"
+                "💡 Get contract addresses with 📊 View Tokens.",
+                parse_mode='Markdown',
+                reply_markup=reply_markup
             )
     
     async def show_main_menu(self, query):
@@ -422,7 +465,7 @@ class SolanaAlertBot:
         
         if not tokens:
             keyboard = [
-                [InlineKeyboardButton("🎛️ Back to Menu", callback_data="menu_main")]
+                [InlineKeyboardButton("🔙 Back to Menu", callback_data="menu_main")]
             ]
             reply_markup = InlineKeyboardMarkup(keyboard)
             
@@ -434,10 +477,13 @@ class SolanaAlertBot:
             )
             return
         
-        # Create token list message
+        # Create token list message with clickable remove buttons
         message_text = "📊 *Tracked Tokens in This Group* 📊\n\n"
         
-        for i, token in enumerate(tokens[:10], 1):  # Limit to 10 for callback
+        # Build keyboard with remove buttons for each token
+        keyboard = []
+        
+        for i, token in enumerate(tokens[:6], 1):  # Limit to 6 for better button display
             current_mcap = token.get('current_mcap', 0) or 0
             initial_mcap = token.get('initial_mcap', 1) or 1
             multiplier = current_mcap / initial_mcap if initial_mcap > 0 else 0
@@ -445,21 +491,30 @@ class SolanaAlertBot:
             status_emoji = "🚀" if multiplier > 1 else "📉" if multiplier < 1 else "➖"
             
             message_text += (
-                f"{status_emoji} *{i}. {token['symbol']}*\n"
-                f"📝 {token['name'][:30]}{'...' if len(token['name']) > 30 else ''}\n"
+                f"{status_emoji} *{i}. {token['symbol']}* - {token['name'][:20]}{'...' if len(token['name']) > 20 else ''}\n"
                 f"💰 ${current_mcap:,.0f} ({multiplier:.2f}x)\n"
-                f"🔗 `{token['contract_address'][:8]}...{token['contract_address'][-8:]}`\n"
+                f"🔗 `{token['contract_address']}`\n"
                 f"⏰ Added: {token['detected_at'][:10]}\n\n"
             )
+            
+            # Add remove button for this token
+            button_text = f"❌ Remove {token['symbol']}"
+            callback_data = f"remove_{token['contract_address']}"
+            keyboard.append([InlineKeyboardButton(button_text, callback_data=callback_data)])
         
-        if len(tokens) > 10:
-            message_text += f"... and {len(tokens) - 10} more tokens\n\n"
+        if len(tokens) > 6:
+            message_text += f"... and {len(tokens) - 6} more tokens\n"
+            message_text += f"💡 Use `/list` command to see all tokens\n\n"
         
-        keyboard = [
-            [InlineKeyboardButton("❌ Remove Token", callback_data="menu_remove")],
+        message_text += "💡 *Click the remove buttons below to delete tokens*\n"
+        
+        # Add navigation buttons
+        keyboard.extend([
+            [InlineKeyboardButton("🔄 Refresh List", callback_data="menu_list")],
             [InlineKeyboardButton("📈 View Stats", callback_data="menu_stats")],
-            [InlineKeyboardButton("🎛️ Back to Menu", callback_data="menu_main")]
-        ]
+            [InlineKeyboardButton("🔙 Back to Menu", callback_data="menu_main")]
+        ])
+        
         reply_markup = InlineKeyboardMarkup(keyboard)
         
         await query.edit_message_text(message_text, parse_mode='Markdown', reply_markup=reply_markup)
@@ -490,8 +545,8 @@ class SolanaAlertBot:
         
         keyboard = [
             [InlineKeyboardButton("📊 View Tokens", callback_data="menu_list")],
-            [InlineKeyboardButton("🔍 Search", callback_data="menu_search")],
-            [InlineKeyboardButton("🎛️ Back to Menu", callback_data="menu_main")]
+            [InlineKeyboardButton("🔍 Search Tokens", callback_data="menu_search")],
+            [InlineKeyboardButton("🔙 Back to Menu", callback_data="menu_main")]
         ]
         reply_markup = InlineKeyboardMarkup(keyboard)
         
@@ -519,11 +574,15 @@ class SolanaAlertBot:
             "• `/stats` - Group performance stats\n"
             "• `/search <query>` - Find specific tokens\n"
             "• `/remove <address>` - Stop tracking a token\n\n"
-            "🔥 *Ready to catch every moonshot!* 🔥"
+            "*� Quick Remove:*\n"
+            "Use the remove commands shown in token list!\n\n"
+            "�🔥 *Ready to catch every moonshot!* 🔥"
         )
         
         keyboard = [
-            [InlineKeyboardButton("🎛️ Back to Menu", callback_data="menu_main")]
+            [InlineKeyboardButton("📊 View Tokens", callback_data="menu_list")],
+            [InlineKeyboardButton("📈 Group Stats", callback_data="menu_stats")],
+            [InlineKeyboardButton("🔙 Back to Menu", callback_data="menu_main")]
         ]
         reply_markup = InlineKeyboardMarkup(keyboard)
         
@@ -552,7 +611,9 @@ class SolanaAlertBot:
         )
         
         keyboard = [
-            [InlineKeyboardButton("🎛️ Back to Menu", callback_data="menu_main")]
+            [InlineKeyboardButton("📊 View Tokens", callback_data="menu_list")],
+            [InlineKeyboardButton("📈 Group Stats", callback_data="menu_stats")],
+            [InlineKeyboardButton("🔙 Back to Menu", callback_data="menu_main")]
         ]
         reply_markup = InlineKeyboardMarkup(keyboard)
         
@@ -614,6 +675,77 @@ class SolanaAlertBot:
             "🛑 *Tracking Stopped*\n\nToken tracking has been stopped by an administrator.",
             parse_mode='Markdown'
         )
+    
+    async def handle_remove_token_callback(self, query, contract_address):
+        """Handle remove token button clicks with confirmation."""
+        if not query.message or not query.message.chat:
+            return
+            
+        chat_id = query.message.chat.id
+        logger.info(f"🗑️ Remove token request: {contract_address} from chat {chat_id}")
+        
+        # Get token info before removing
+        tokens = await self.database.get_tokens_for_chat(chat_id)
+        token_to_remove = None
+        
+        for token in tokens:
+            if token['contract_address'] == contract_address:
+                token_to_remove = token
+                break
+        
+        if not token_to_remove:
+            logger.warning(f"❌ Token {contract_address} not found in chat {chat_id}")
+            await query.edit_message_text(
+                "❌ *Token Not Found*\n\n"
+                "This token is no longer being tracked.",
+                parse_mode='Markdown',
+                reply_markup=InlineKeyboardMarkup([
+                    [InlineKeyboardButton("🔙 Back to List", callback_data="menu_list")]
+                ])
+            )
+            return
+        
+        # Remove the token
+        try:
+            logger.info(f"🔧 Attempting to remove token: {contract_address} from chat {chat_id}")
+            success = await self.database.remove_token(contract_address, chat_id)
+            logger.info(f"✅ Remove operation result: {success}")
+            
+            if success:
+                await query.edit_message_text(
+                    f"✅ *Token Removed Successfully!*\n\n"
+                    f"🪙 **{token_to_remove['symbol']}** - {token_to_remove['name']}\n"
+                    f"🔗 `{contract_address}`\n\n"
+                    f"Token has been removed from tracking.",
+                    parse_mode='Markdown',
+                    reply_markup=InlineKeyboardMarkup([
+                        [InlineKeyboardButton("📊 View Remaining Tokens", callback_data="menu_list")],
+                        [InlineKeyboardButton("🔙 Back to Menu", callback_data="menu_main")]
+                    ])
+                )
+            else:
+                logger.error(f"❌ Database remove operation failed for {contract_address}")
+                await query.edit_message_text(
+                    f"❌ *Removal Failed*\n\n"
+                    f"Could not remove token: {token_to_remove['symbol']}\n"
+                    f"Database operation returned: {success}\n"
+                    f"Please try again or use `/remove {contract_address}`",
+                    parse_mode='Markdown',
+                    reply_markup=InlineKeyboardMarkup([
+                        [InlineKeyboardButton("🔙 Back to List", callback_data="menu_list")]
+                    ])
+                )
+        except Exception as e:
+            logger.error(f"❌ Error removing token via callback: {e}")
+            await query.edit_message_text(
+                f"❌ *Error Occurred*\n\n"
+                f"Failed to remove token: {str(e)}\n"
+                f"Please try again.",
+                parse_mode='Markdown',
+                reply_markup=InlineKeyboardMarkup([
+                    [InlineKeyboardButton("🔙 Back to List", callback_data="menu_list")]
+                ])
+            )
     
     async def handle_message(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         """Enhanced message handler with perfect token detection."""
