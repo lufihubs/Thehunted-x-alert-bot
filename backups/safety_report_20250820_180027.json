@@ -1,0 +1,129 @@
+{
+  "timestamp": "2025-08-20T18:00:27.574935",
+  "total_groups": 3,
+  "total_tokens": 11,
+  "active_tokens": 11,
+  "inactive_tokens": 0,
+  "groups": {
+    "-1001234567890": {
+      "total_tokens": 1,
+      "active_tokens": 1,
+      "inactive_tokens": 0,
+      "tokens": [
+        {
+          "address": "test123address",
+          "symbol": "TEST",
+          "name": "Test Token",
+          "is_active": true,
+          "initial_mcap": 1000000.0,
+          "current_mcap": 1000000.0,
+          "detected_at": "2025-08-19 17:35:01"
+        }
+      ]
+    },
+    "-4873290500": {
+      "total_tokens": 4,
+      "active_tokens": 4,
+      "inactive_tokens": 0,
+      "tokens": [
+        {
+          "address": "Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777",
+          "symbol": "MIST",
+          "name": "Mist",
+          "is_active": true,
+          "initial_mcap": 39085.0,
+          "current_mcap": 23548.0,
+          "detected_at": "2025-08-19 15:18:33"
+        },
+        {
+          "address": "8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777",
+          "symbol": "DUST",
+          "name": "ANGEL DUST",
+          "is_active": true,
+          "initial_mcap": 36586.0,
+          "current_mcap": 20732.0,
+          "detected_at": "2025-08-19 15:19:19"
+        },
+        {
+          "address": "So11111111111111111111111111111111111111112",
+          "symbol": "SOL",
+          "name": "Solana",
+          "is_active": true,
+          "initial_mcap": 50000000.0,
+          "current_mcap": 0.0,
+          "detected_at": "2025-08-19 22:02:46"
+        },
+        {
+          "address": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
+          "symbol": "mSOL",
+          "name": "Marinade staked SOL (mSOL)",
+          "is_active": true,
+          "initial_mcap": 931361007.0,
+          "current_mcap": 922401253.0,
+          "detected_at": "2025-08-19 22:27:45"
+        }
+      ]
+    },
+    "851782576": {
+      "total_tokens": 6,
+      "active_tokens": 6,
+      "inactive_tokens": 0,
+      "tokens": [
+        {
+          "address": "F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump",
+          "symbol": "PUSH",
+          "name": "LIFE OF A SHOWGIRL",
+          "is_active": true,
+          "initial_mcap": 596751.0,
+          "current_mcap": 167517.0,
+          "detected_at": "2025-08-19 00:13:05"
+        },
+        {
+          "address": "7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk",
+          "symbol": "SPICEY",
+          "name": "Spicey AI",
+          "is_active": true,
+          "initial_mcap": 812067.0,
+          "current_mcap": 859070.0,
+          "detected_at": "2025-08-19 00:13:30"
+        },
+        {
+          "address": "CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump",
+          "symbol": "goldenball",
+          "name": "golden ball",
+          "is_active": true,
+          "initial_mcap": 49301.41,
+          "current_mcap": 5110.66,
+          "detected_at": "2025-08-19 00:34:03"
+        },
+        {
+          "address": "GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW",
+          "symbol": "ELONWIFHAT",
+          "name": "Elonwifhat",
+          "is_active": true,
+          "initial_mcap": 27164.61,
+          "current_mcap": 5339.72,
+          "detected_at": "2025-08-19 00:51:15"
+        },
+        {
+          "address": "7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump",
+          "symbol": "Crimetok",
+          "name": "The criminal Tiktoker",
+          "is_active": true,
+          "initial_mcap": 14679.6,
+          "current_mcap": 4103.0,
+          "detected_at": "2025-08-19 00:53:06"
+        },
+        {
+          "address": "EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump",
+          "symbol": "Zorux",
+          "name": "Circle of the Universe",
+          "is_active": true,
+          "initial_mcap": 10456.56,
+          "current_mcap": 5323.81,
+          "detected_at": "2025-08-19 00:59:51"
+        }
+      ]
+    }
+  }
+}

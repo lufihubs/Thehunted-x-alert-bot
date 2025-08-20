@@ -1,0 +1,157 @@
+{
+  "backup_time": "2025-08-20T17:50:39.291932",
+  "groups": {},
+  "tokens_by_group": {
+    "-1001234567890": {
+      "active_tokens": [
+        {
+          "contract_address": "test123address",
+          "symbol": "TEST",
+          "name": "Test Token",
+          "initial_mcap": 1000000.0,
+          "current_mcap": 1000000.0,
+          "initial_price": 0.001,
+          "current_price": 0.001,
+          "detected_at": "2025-08-19 17:35:01",
+          "last_updated": "2025-08-19 17:35:01",
+          "multipliers_alerted": "[]"
+        }
+      ],
+      "inactive_tokens": [],
+      "total_count": 1
+    },
+    "-4873290500": {
+      "active_tokens": [
+        {
+          "contract_address": "Ai75UgLvqULLHeXTfDc7MoR6NTqTqS6PMfQmuHK8j777",
+          "symbol": "MIST",
+          "name": "Mist",
+          "initial_mcap": 39085.0,
+          "current_mcap": 23548.0,
+          "initial_price": 3.908e-05,
+          "current_price": 2.354e-05,
+          "detected_at": "2025-08-19 15:18:33",
+          "last_updated": "2025-08-20 00:21:15",
+          "multipliers_alerted": "[]"
+        },
+        {
+          "contract_address": "8ZwgS1WsnaL29eYjdZ8RZeVim62S1tVriFbWcas5N777",
+          "symbol": "DUST",
+          "name": "ANGEL DUST",
+          "initial_mcap": 36586.0,
+          "current_mcap": 20732.0,
+          "initial_price": 3.658e-05,
+          "current_price": 2.073e-05,
+          "detected_at": "2025-08-19 15:19:19",
+          "last_updated": "2025-08-20 00:21:15",
+          "multipliers_alerted": "[]"
+        },
+        {
+          "contract_address": "So11111111111111111111111111111111111111112",
+          "symbol": "SOL",
+          "name": "Solana",
+          "initial_mcap": 50000000.0,
+          "current_mcap": 0.0,
+          "initial_price": 100.0,
+          "current_price": 0.0,
+          "detected_at": "2025-08-19 22:02:46",
+          "last_updated": "2025-08-19 22:36:08",
+          "multipliers_alerted": "[]"
+        },
+        {
+          "contract_address": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
+          "symbol": "mSOL",
+          "name": "Marinade staked SOL (mSOL)",
+          "initial_mcap": 931361007.0,
+          "current_mcap": 922401253.0,
+          "initial_price": 235.4,
+          "current_price": 233.14,
+          "detected_at": "2025-08-19 22:27:45",
+          "last_updated": "2025-08-20 00:21:14",
+          "multipliers_alerted": "[]"
+        }
+      ],
+      "inactive_tokens": [],
+      "total_count": 4
+    },
+    "851782576": {
+      "active_tokens": [
+        {
+          "contract_address": "F228BcJAxfjzJhfwMug4VQ4zWYothnuY8qAYStuwpump",
+          "symbol": "PUSH",
+          "name": "LIFE OF A SHOWGIRL",
+          "initial_mcap": 596751.0,
+          "current_mcap": 167517.0,
+          "initial_price": 0.0005967,
+          "current_price": 0.0001675,
+          "detected_at": "2025-08-19 00:13:05",
+          "last_updated": "2025-08-19 17:54:42",
+          "multipliers_alerted": "[]"
+        },
+        {
+          "contract_address": "7eENH2rqqVAtXoCwBQ1S4FbXJjxAuqNLpcMxfHC8bonk",
+          "symbol": "SPICEY",
+          "name": "Spicey AI",
+          "initial_mcap": 812067.0,
+          "current_mcap": 859070.0,
+          "initial_price": 0.000812,
+          "current_price": 0.000859,
+          "detected_at": "2025-08-19 00:13:30",
+          "last_updated": "2025-08-19 17:54:42",
+          "multipliers_alerted": "[]"
+        },
+        {
+          "contract_address": "CDxPVUQfdxLKvoZyoT7mHgX2KnbuhD1HkhjqJVn7pump",
+          "symbol": "goldenball",
+          "name": "golden ball",
+          "initial_mcap": 49301.41,
+          "current_mcap": 5110.66,
+          "initial_price": 4.93e-05,
+          "current_price": 5.11e-06,
+          "detected_at": "2025-08-19 00:34:03",
+          "last_updated": "2025-08-19 17:54:43",
+          "multipliers_alerted": "[]"
+        },
+        {
+          "contract_address": "GhP3zi8YaftK6PDSdFcYCYv6ocQczsNsdNn1fXBpcPpW",
+          "symbol": "ELONWIFHAT",
+          "name": "Elonwifhat",
+          "initial_mcap": 27164.61,
+          "current_mcap": 5339.72,
+          "initial_price": 2.716e-05,
+          "current_price": 5.339e-06,
+          "detected_at": "2025-08-19 00:51:15",
+          "last_updated": "2025-08-19 17:54:43",
+          "multipliers_alerted": "[]"
+        },
+        {
+          "contract_address": "7BoapE9yYNAxsBEW3LxniGxERQxsy3nZDo9ifrXFpump",
+          "symbol": "Crimetok",
+          "name": "The criminal Tiktoker",
+          "initial_mcap": 14679.6,
+          "current_mcap": 4103.0,
+          "initial_price": 1.467e-05,
+          "current_price": 4.103e-06,
+          "detected_at": "2025-08-19 00:53:06",
+          "last_updated": "2025-08-19 17:54:43",
+          "multipliers_alerted": "[]"
+        },
+        {
+          "contract_address": "EKM7Qmft3QKKMR4jxoHxJmckyUonbBNd9u2ip4RZpump",
+          "symbol": "Zorux",
+          "name": "Circle of the Universe",
+          "initial_mcap": 10456.56,
+          "current_mcap": 5323.81,
+          "initial_price": 1.045e-05,
+          "current_price": 5.323e-06,
+          "detected_at": "2025-08-19 00:59:51",
+          "last_updated": "2025-08-19 17:54:44",
+          "multipliers_alerted": "[]"
+        }
+      ],
+      "inactive_tokens": [],
+      "total_count": 6
+    }
+  },
+  "alert_history": {}
+}
