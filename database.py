@@ -373,18 +373,23 @@ class Database:
     
     async def update_token_price(self, contract_address: str, current_mcap: float, 
                                 current_price: float):
-        """Update token's current price and market cap, tracking highs and lows"""
+        """Update token's current price and market cap across ALL groups, tracking highs and lows"""
         async with aiosqlite.connect(self.db_path) as db:
-            # Get current token data
+            # First, get all instances of this token across all groups
             cursor = await db.execute('''
-                SELECT lowest_mcap, lowest_price, highest_mcap, highest_price,
+                SELECT id, chat_id, lowest_mcap, lowest_price, highest_mcap, highest_price,
                        confirmed_scan_mcap, scan_confirmation_count
-                FROM tokens WHERE contract_address = ?
+                FROM tokens WHERE contract_address = ? AND is_active = 1
             ''', (contract_address,))
-            row = await cursor.fetchone()
+            rows = await cursor.fetchall()
             
-            if row:
-                lowest_mcap, lowest_price, highest_mcap, highest_price, confirmed_mcap, scan_count = row
+            if not rows:
+                return  # No active tokens found
+            
+            updates_made = 0
+            
+            for row in rows:
+                token_id, chat_id, lowest_mcap, lowest_price, highest_mcap, highest_price, confirmed_mcap, scan_count = row
                 
                 # Handle NULL values
                 lowest_mcap = lowest_mcap if lowest_mcap is not None else current_mcap
@@ -408,16 +413,26 @@ class Database:
                     new_confirmed_mcap = confirmed_mcap or current_mcap
                     new_scan_count = scan_count
                 
+                # Update this specific token instance
                 await db.execute('''
                     UPDATE tokens 
                     SET current_mcap = ?, current_price = ?, last_updated = CURRENT_TIMESTAMP,
                         lowest_mcap = ?, lowest_price = ?, highest_mcap = ?, highest_price = ?,
                         confirmed_scan_mcap = ?, scan_confirmation_count = ?
-                    WHERE contract_address = ?
+                    WHERE id = ?
                 ''', (current_mcap, current_price, new_lowest_mcap, new_lowest_price,
                       new_highest_mcap, new_highest_price, new_confirmed_mcap, 
-                      new_scan_count, contract_address))
-                await db.commit()
+                      new_scan_count, token_id))
+                
+                updates_made += 1
+            
+            await db.commit()
+            
+            # Log the updates for verification
+            if updates_made > 1:
+                print(f"🔄 Updated token {contract_address[:8]}... across {updates_made} groups")
+            elif updates_made == 1:
+                print(f"🔄 Updated token {contract_address[:8]}... in 1 group")
     
     async def get_active_tokens(self) -> List[Dict]:
         """Get all active tokens for monitoring"""

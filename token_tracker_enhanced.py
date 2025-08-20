@@ -15,7 +15,7 @@ class TokenTracker:
         self.bot = bot
         self.tracking_tokens_by_group: Dict[int, Dict[str, Dict]] = {}  # chat_id -> {contract -> token_data}
         self.sent_alerts: Dict[str, Dict[int, Set[int]]] = {}  # contract -> {chat_id -> set of multipliers}
-        self.last_alert_time: Dict[str, Dict[int, datetime]] = {}  # contract -> {chat_id -> last_alert_time}
+        self.last_alert_time: Dict[str, Dict[int, Dict[str, datetime]]] = {}  # contract -> {chat_id -> {alert_type -> last_alert_time}}
         self.is_running = False
         self.database = Database(Config.DATABASE_PATH)
         self.last_save_time = datetime.now()
@@ -190,9 +190,19 @@ class TokenTracker:
             logger.error(f"Error loading tokens by group: {e}")
     
     async def _check_all_groups(self):
-        """Check all groups for token price changes."""
+        """Check all groups for token price changes with comprehensive logging."""
         if not self.tracking_tokens_by_group:
+            logger.info("🔍 No groups with tokens to check")
             return
+        
+        total_groups = len(self.tracking_tokens_by_group)
+        total_tokens = sum(len(tokens) for tokens in self.tracking_tokens_by_group.values())
+        
+        logger.info(f"🔄 Starting price check for {total_tokens} tokens across {total_groups} groups")
+        
+        # Track successful updates
+        successful_updates = 0
+        failed_updates = 0
         
         tasks = []
         for chat_id, tokens in self.tracking_tokens_by_group.items():
@@ -200,11 +210,26 @@ class TokenTracker:
                 tasks.append(self._check_group_tokens(chat_id, tokens))
         
         if tasks:
-            await asyncio.gather(*tasks, return_exceptions=True)
+            results = await asyncio.gather(*tasks, return_exceptions=True)
+            
+            # Count successful and failed updates
+            for result in results:
+                if isinstance(result, Exception):
+                    failed_updates += 1
+                    logger.error(f"Group check failed: {result}")
+                else:
+                    successful_updates += 1
+        
+        logger.info(f"✅ Price check completed: {successful_updates} groups successful, {failed_updates} failed")
     
     async def _check_group_tokens(self, chat_id: int, tokens: Dict[str, Dict]):
-        """Check tokens for a specific group."""
+        """Check tokens for a specific group with detailed logging."""
+        group_token_count = len(tokens)
+        logger.info(f"🔍 Checking {group_token_count} tokens in group {chat_id}")
+        
         api = SolanaAPI()
+        updated_count = 0
+        error_count = 0
         
         async with api:
             for contract_address, token_data in list(tokens.items()):
@@ -218,7 +243,13 @@ class TokenTracker:
                         new_mcap = current_info['market_cap']
                         new_price = current_info['price']
                         
-                        # Update tracking data with all current values
+                        # Log price change if significant
+                        if old_mcap > 0:
+                            price_change = ((new_mcap - old_mcap) / old_mcap) * 100
+                            if abs(price_change) > 1:  # Log changes > 1%
+                                logger.info(f"📈 {token_data['symbol']} price change: {price_change:+.2f}% (Group {chat_id})")
+                        
+                        # Update tracking data with all current values for THIS group
                         token_data['current_mcap'] = new_mcap
                         token_data['current_price'] = new_price
                         token_data['highest_mcap'] = max(token_data['highest_mcap'], new_mcap)
@@ -234,20 +265,29 @@ class TokenTracker:
                             # Real-time rug detection alert
                             await self._check_rug_detection_alert(contract_address, token_data, chat_id, loss_percentage)
                         
-                        # Update database with latest prices
+                        # Update database with latest prices (updates ALL groups in database)
                         await self.database.update_token_price(contract_address, new_mcap, new_price)
                         
-                        # Check for all alerts in real-time - group-specific
-                        await self._check_multiplier_alerts_for_group(contract_address, token_data, chat_id)
-                        await self._check_loss_alerts_for_group(contract_address, token_data, chat_id)
+                        # CRITICAL: Update tracking data for this token in ALL groups
+                        await self._update_token_across_all_groups(contract_address, new_mcap, new_price)
+                        
+                        # CRITICAL: Check alerts for ALL groups tracking this token
+                        await self._check_alerts_across_all_groups(contract_address, new_mcap, new_price)
+                        
+                        updated_count += 1
                         
                     else:
                         # Token might be rugged or delisted
                         logger.warning(f"⚠️ No data found for {token_data['symbol']} in group {chat_id}")
+                        error_count += 1
                         
                 except Exception as e:
                     logger.error(f"Error checking token {contract_address} in group {chat_id}: {e}")
-    
+                    error_count += 1
+        
+        logger.info(f"✅ Group {chat_id}: {updated_count} tokens updated, {error_count} errors")
+        return updated_count
+
     async def _check_multiplier_alerts_for_group(self, contract_address: str, token_data: Dict, chat_id: int):
         """Check and send multiplier alerts for a specific group."""
         try:
@@ -262,6 +302,12 @@ class TokenTracker:
             # Check alert cooldown
             if self._is_alert_on_cooldown(contract_address, chat_id, 'multiplier'):
                 return
+            
+            # Initialize sent_alerts if needed
+            if contract_address not in self.sent_alerts:
+                self.sent_alerts[contract_address] = {}
+            if chat_id not in self.sent_alerts[contract_address]:
+                self.sent_alerts[contract_address][chat_id] = set()
             
             # Check which multiplier alerts should be sent
             for alert_multiplier in Config.ALERT_MULTIPLIERS:
@@ -328,6 +374,45 @@ class TokenTracker:
                     
         except Exception as e:
             logger.error(f"Error checking loss alerts for {contract_address} in group {chat_id}: {e}")
+    
+    async def _update_token_across_all_groups(self, contract_address: str, new_mcap: float, new_price: float):
+        """Update token data across all groups that are tracking this token."""
+        for group_id, group_tokens in self.tracking_tokens_by_group.items():
+            if contract_address in group_tokens:
+                token_data = group_tokens[contract_address]
+                
+                # Update all price-related data for this token in this group
+                token_data['current_mcap'] = new_mcap
+                token_data['current_price'] = new_price
+                token_data['highest_mcap'] = max(token_data['highest_mcap'], new_mcap)
+                token_data['lowest_mcap'] = min(token_data['lowest_mcap'], new_mcap)
+                token_data['last_updated'] = datetime.now()
+                
+                # Update loss percentage for this group's tracking
+                baseline_mcap = token_data.get('confirmed_scan_mcap') or token_data['initial_mcap']
+                if baseline_mcap > 0:
+                    loss_percentage = ((new_mcap - baseline_mcap) / baseline_mcap) * 100
+                    token_data['current_loss_percentage'] = loss_percentage
+                
+                logger.debug(f"📊 Updated {token_data.get('symbol', 'Unknown')} in group {group_id}: ${new_mcap:,.0f}")
+    
+    async def _check_alerts_across_all_groups(self, contract_address: str, new_mcap: float, new_price: float):
+        """Check and send alerts to ALL groups tracking this token."""
+        for group_id, group_tokens in self.tracking_tokens_by_group.items():
+            if contract_address in group_tokens:
+                token_data = group_tokens[contract_address]
+                
+                # Check multiplier alerts for this group
+                await self._check_multiplier_alerts_for_group(contract_address, token_data, group_id)
+                
+                # Check loss alerts for this group
+                await self._check_loss_alerts_for_group(contract_address, token_data, group_id)
+                
+                # Check rug detection for this group (if significant loss)
+                baseline_mcap = token_data.get('confirmed_scan_mcap') or token_data['initial_mcap']
+                if baseline_mcap > 0:
+                    loss_percentage = ((new_mcap - baseline_mcap) / baseline_mcap) * 100
+                    await self._check_rug_detection_alert(contract_address, token_data, group_id, loss_percentage)
     
     async def _check_rug_detection_alert(self, contract_address: str, token_data: Dict, chat_id: int, loss_percentage: float):
         """Check and send real-time rug detection alerts."""
@@ -476,24 +561,30 @@ class TokenTracker:
             logger.error(f"Error in auto-remove rugged tokens: {e}")
     
     def _is_alert_on_cooldown(self, contract_address: str, chat_id: int, alert_type: str) -> bool:
-        """Check if alert is on cooldown for this token-group combination."""
+        """Check if alert is on cooldown for this token-group-type combination."""
         if contract_address not in self.last_alert_time:
             return False
         
         if chat_id not in self.last_alert_time[contract_address]:
             return False
         
-        last_alert = self.last_alert_time[contract_address][chat_id]
+        if alert_type not in self.last_alert_time[contract_address][chat_id]:
+            return False
+        
+        last_alert = self.last_alert_time[contract_address][chat_id][alert_type]
         cooldown_time = timedelta(seconds=Config.ALERT_COOLDOWN)
         
         return datetime.now() - last_alert < cooldown_time
     
     def _set_alert_cooldown(self, contract_address: str, chat_id: int, alert_type: str):
-        """Set alert cooldown for this token-group combination."""
+        """Set alert cooldown for this token-group-type combination."""
         if contract_address not in self.last_alert_time:
             self.last_alert_time[contract_address] = {}
         
-        self.last_alert_time[contract_address][chat_id] = datetime.now()
+        if chat_id not in self.last_alert_time[contract_address]:
+            self.last_alert_time[contract_address][chat_id] = {}
+        
+        self.last_alert_time[contract_address][chat_id][alert_type] = datetime.now()
     
     async def _send_auto_removal_notification(self, token: Dict):
         """Send notification about auto-removed token."""
