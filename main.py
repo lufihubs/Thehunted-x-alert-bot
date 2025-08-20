@@ -7,7 +7,7 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes, CallbackQueryHandler
 from config import Config
 from database import Database
-from token_tracker import TokenTracker
+from token_tracker_enhanced import TokenTracker
 from solana_api import SolanaAPI
 
 # Configure logging
