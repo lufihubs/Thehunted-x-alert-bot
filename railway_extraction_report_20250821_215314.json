@@ -1,0 +1,18 @@
+{
+  "extraction_timestamp": "2025-08-21T21:53:14.036774",
+  "target_group": -1002350881772,
+  "railway_status": "active",
+  "extraction_methods_tried": [
+    "Direct database access",
+    "Telegram API chat info",
+    "Railway logs check"
+  ],
+  "tokens_found": 0,
+  "next_steps": [
+    "Deploy enhanced monitoring system",
+    "Sync through git deployment",
+    "Test real-time tracking",
+    "Verify all tokens get updates"
+  ],
+  "deployment_ready": true
+}

@@ -13,6 +13,9 @@ class Config:
     # Database settings - Railway compatible
     DATABASE_PATH: str = os.getenv('DATABASE_PATH', 'tokens.db')
     
+    # === THE HUNTED GROUP CONFIGURATION ===
+    THE_HUNTED_GROUP_ID = -1002350881772  # Primary focus group
+    
     # Tracking settings
     PRICE_CHECK_INTERVAL: int = 5  # seconds - ultra-fast real-time monitoring
     MAX_TOKENS_PER_GROUP: int = 100

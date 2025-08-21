@@ -38340,3 +38340,708 @@ Traceback (most recent call last):
   File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 240, in do_request
     raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
 telegram.error.NetworkError: httpx.ReadError: 
+2025-08-21 21:04:57,356 - __main__ - INFO - 🚀 Starting Enhanced Solana Alert Bot...
+2025-08-21 21:04:58,944 - __main__ - INFO - 🤖 Enhanced Bot initialized successfully with group support
+2025-08-21 21:05:02,287 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getMe "HTTP/1.1 200 OK"
+2025-08-21 21:05:02,289 - telegram.ext.Application - INFO - Application started
+2025-08-21 21:05:03,326 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/deleteWebhook "HTTP/1.1 200 OK"
+2025-08-21 21:05:03,327 - __main__ - INFO - ✅ Enhanced Bot is running with perfect token detection!
+2025-08-21 21:05:08,940 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 409 Conflict"
+2025-08-21 21:05:08,941 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-08-21 21:05:08,941 - telegram.ext.Updater - ERROR - Exception happened while polling for updates.
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 543, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 381, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 3661, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 469, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 325, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 497, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 168, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-08-21 21:05:14,658 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 409 Conflict"
+2025-08-21 21:05:14,659 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-08-21 21:05:14,659 - telegram.ext.Updater - ERROR - Exception happened while polling for updates.
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 543, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 381, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 3661, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 469, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 325, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 497, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 168, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-08-21 21:05:21,609 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 409 Conflict"
+2025-08-21 21:05:21,612 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-08-21 21:05:21,612 - telegram.ext.Updater - ERROR - Exception happened while polling for updates.
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 543, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 381, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 3661, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 469, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 325, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 497, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 168, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-08-21 21:05:27,435 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 409 Conflict"
+2025-08-21 21:05:27,436 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-08-21 21:05:27,436 - telegram.ext.Updater - ERROR - Exception happened while polling for updates.
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 543, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 381, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 3661, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 469, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 325, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 497, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 168, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-08-21 21:05:36,092 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 409 Conflict"
+2025-08-21 21:05:36,093 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-08-21 21:05:36,094 - telegram.ext.Updater - ERROR - Exception happened while polling for updates.
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 543, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 381, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 3661, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 469, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 325, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 497, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 168, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-08-21 21:05:49,313 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 409 Conflict"
+2025-08-21 21:05:49,314 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-08-21 21:05:49,314 - telegram.ext.Updater - ERROR - Exception happened while polling for updates.
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 543, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 381, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 3661, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 469, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 325, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 497, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 168, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-08-21 21:06:08,285 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-21 21:06:09,567 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 409 Conflict"
+2025-08-21 21:06:09,568 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-08-21 21:06:09,569 - telegram.ext.Updater - ERROR - Exception happened while polling for updates.
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 543, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 381, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 3661, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 469, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 325, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 497, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 168, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-08-21 21:06:20,766 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-21 21:06:30,862 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 409 Conflict"
+2025-08-21 21:06:30,865 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-08-21 21:06:30,866 - telegram.ext.Updater - ERROR - Exception happened while polling for updates.
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 543, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 381, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 3661, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 469, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 325, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 497, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 168, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-08-21 21:06:42,078 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-21 21:06:52,247 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-21 21:07:00,729 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 409 Conflict"
+2025-08-21 21:07:00,749 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-08-21 21:07:00,753 - telegram.ext.Updater - ERROR - Exception happened while polling for updates.
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 543, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 381, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 3661, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 469, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 325, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 497, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 168, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-08-21 21:07:11,980 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-21 21:07:22,155 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-21 21:07:32,320 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-21 21:07:34,998 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 409 Conflict"
+2025-08-21 21:07:34,999 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-08-21 21:07:34,999 - telegram.ext.Updater - ERROR - Exception happened while polling for updates.
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 543, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 381, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 3661, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 469, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 325, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 497, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 168, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-08-21 21:07:46,190 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-21 21:07:56,361 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-21 21:08:06,612 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-21 21:08:09,205 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 409 Conflict"
+2025-08-21 21:08:09,205 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-08-21 21:08:09,206 - telegram.ext.Updater - ERROR - Exception happened while polling for updates.
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 543, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 381, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 3661, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 469, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 325, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 497, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 168, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-08-21 21:08:20,401 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-21 21:08:30,845 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-21 21:08:41,067 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-21 21:08:43,522 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 409 Conflict"
+2025-08-21 21:08:43,524 - telegram.ext.Updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-08-21 21:08:43,525 - telegram.ext.Updater - ERROR - Exception happened while polling for updates.
+Traceback (most recent call last):
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
+    raise exc
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 543, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 381, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 3661, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 469, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 325, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\_bot.py", line 497, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 168, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\dell\alertbot\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-08-21 21:08:54,735 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"
+2025-08-21 21:09:04,898 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8301492869:AAE1sP4G54PqDQEIHs-9v49GCJ8rnz1aKqQ/getUpdates "HTTP/1.1 200 OK"

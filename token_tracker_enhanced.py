@@ -28,6 +28,7 @@ class TokenTracker:
             
         self.is_running = True
         logger.info("🚀 Enhanced Multi-Group Token tracking started with auto-save")
+        logger.info(f"🎯 PRIMARY FOCUS: The Hunted Group ({Config.THE_HUNTED_GROUP_ID})")
         
         # Load existing tokens from database organized by group
         await self._load_tokens_by_group()
@@ -35,9 +36,10 @@ class TokenTracker:
         # Create initial backup
         await self.database.auto_save_on_update()
         
-        # Start the tracking loop with real-time monitoring
+        # Start the tracking loop with enhanced real-time monitoring for ALL TOKENS
         while self.is_running:
             try:
+                # Real-time check of ALL tokens across ALL groups (prioritizing The Hunted)
                 await self._check_all_groups()
                 await self._auto_remove_rugged_tokens()
                 
@@ -45,9 +47,10 @@ class TokenTracker:
                 if (datetime.now() - self.last_save_time).seconds >= self.save_interval:
                     await self._auto_save_data()
                 
-                await asyncio.sleep(Config.PRICE_CHECK_INTERVAL)
+                # Enhanced real-time monitoring with 5-second intervals
+                await asyncio.sleep(5)  # Faster updates for real-time alerts
             except Exception as e:
-                logger.error(f"Error in tracking loop: {e}")
+                logger.error(f"Error in enhanced tracking loop: {e}")
                 await asyncio.sleep(5)  # Shorter retry interval for better real-time response
     
     async def _auto_save_data(self):
@@ -190,7 +193,7 @@ class TokenTracker:
             logger.error(f"Error loading tokens by group: {e}")
     
     async def _check_all_groups(self):
-        """Check all groups for token price changes with comprehensive logging."""
+        """Check all groups for token price changes with REAL-TIME monitoring for ALL tokens."""
         if not self.tracking_tokens_by_group:
             logger.info("🔍 No groups with tokens to check")
             return
@@ -198,29 +201,118 @@ class TokenTracker:
         total_groups = len(self.tracking_tokens_by_group)
         total_tokens = sum(len(tokens) for tokens in self.tracking_tokens_by_group.values())
         
-        logger.info(f"🔄 Starting price check for {total_tokens} tokens across {total_groups} groups")
+        logger.info(f"🔄 REAL-TIME UPDATE: Starting price check for {total_tokens} tokens across {total_groups} groups")
         
-        # Track successful updates
-        successful_updates = 0
-        failed_updates = 0
-        
-        tasks = []
+        # NEW: Get ALL unique tokens for parallel processing
+        all_unique_tokens = {}
         for chat_id, tokens in self.tracking_tokens_by_group.items():
-            if tokens:  # Only process groups with tokens
-                tasks.append(self._check_group_tokens(chat_id, tokens))
+            for contract_address, token_data in tokens.items():
+                if contract_address not in all_unique_tokens:
+                    all_unique_tokens[contract_address] = token_data
         
-        if tasks:
-            results = await asyncio.gather(*tasks, return_exceptions=True)
+        logger.info(f"🎯 Processing {len(all_unique_tokens)} unique tokens for real-time updates")
+        
+        # Create parallel tasks for ALL unique tokens
+        api = SolanaAPI()
+        update_tasks = []
+        async with api:
+            for contract_address, token_data in all_unique_tokens.items():
+                task = self._update_single_token_realtime(api, contract_address, token_data)
+                update_tasks.append(task)
             
-            # Count successful and failed updates
-            for result in results:
-                if isinstance(result, Exception):
-                    failed_updates += 1
-                    logger.error(f"Group check failed: {result}")
-                else:
-                    successful_updates += 1
-        
-        logger.info(f"✅ Price check completed: {successful_updates} groups successful, {failed_updates} failed")
+            if update_tasks:
+                # Execute ALL token updates in parallel
+                results = await asyncio.gather(*update_tasks, return_exceptions=True)
+                
+                # Count and log results
+                successful_updates = sum(1 for r in results if r is True)
+                failed_updates = len(results) - successful_updates
+                
+                logger.info(f"✅ REAL-TIME UPDATE COMPLETE: {successful_updates} tokens updated, {failed_updates} failed")
+                
+                # Now check alerts for all groups after ALL tokens are updated
+                await self._check_alerts_for_all_updated_tokens()
+            else:
+                logger.warning("⚠️ No update tasks created")
+    
+    async def _update_single_token_realtime(self, api: SolanaAPI, contract_address: str, token_data: Dict):
+        """Update a single token with real-time price data for ALL groups tracking it."""
+        try:
+            # Get current token info from API
+            current_info = await api.get_token_info(contract_address)
+            
+            if current_info and current_info.get('market_cap', 0) > 0:
+                new_mcap = current_info['market_cap']
+                new_price = current_info['price']
+                
+                # Log significant price changes
+                old_mcap = token_data.get('current_mcap', token_data.get('initial_mcap', 0))
+                if old_mcap > 0:
+                    change_pct = ((new_mcap - old_mcap) / old_mcap) * 100
+                    if abs(change_pct) > 1:  # Log changes > 1%
+                        logger.info(f"📈 {token_data.get('symbol', 'UNKNOWN')}: {change_pct:+.2f}% (${old_mcap:,.0f} → ${new_mcap:,.0f})")
+                
+                # Update database immediately
+                await self.database.update_token_price(contract_address, new_mcap, new_price)
+                
+                # Update token data for ALL groups tracking this token
+                await self._update_token_across_all_groups(contract_address, new_mcap, new_price)
+                
+                return True
+            else:
+                logger.warning(f"⚠️ No data for {token_data.get('symbol', 'Unknown')} ({contract_address[:8]}...)")
+                return False
+                
+        except Exception as e:
+            logger.error(f"❌ Error updating {contract_address}: {e}")
+            return False
+    
+    async def _check_alerts_for_all_updated_tokens(self):
+        """Check alerts for all tokens across all groups after real-time updates."""
+        try:
+            logger.info("🚨 Checking alerts for all updated tokens across all groups...")
+            
+            alert_tasks = []
+            for chat_id, tokens in self.tracking_tokens_by_group.items():
+                for contract_address, token_data in tokens.items():
+                    # Create alert check tasks for each token in each group
+                    task = self._check_all_alerts_for_token_in_group(contract_address, token_data, chat_id)
+                    alert_tasks.append(task)
+            
+            if alert_tasks:
+                alert_results = await asyncio.gather(*alert_tasks, return_exceptions=True)
+                
+                # Count alert notifications sent
+                successful_alerts = sum(1 for r in alert_results if r is True)
+                failed_alerts = sum(1 for r in alert_results if isinstance(r, Exception))
+                
+                if successful_alerts > 0:
+                    logger.info(f"🚨 Alert check complete: {successful_alerts} alerts processed, {failed_alerts} errors")
+                    
+        except Exception as e:
+            logger.error(f"❌ Error checking alerts for all tokens: {e}")
+    
+    async def _check_all_alerts_for_token_in_group(self, contract_address: str, token_data: Dict, chat_id: int):
+        """Check all alert types for a specific token in a specific group."""
+        try:
+            # Check multiplier alerts
+            await self._check_multiplier_alerts_for_group(contract_address, token_data, chat_id)
+            
+            # Check loss alerts
+            await self._check_loss_alerts_for_group(contract_address, token_data, chat_id)
+            
+            # Check rug detection
+            baseline_mcap = token_data.get('confirmed_scan_mcap') or token_data['initial_mcap']
+            current_mcap = token_data['current_mcap']
+            if baseline_mcap > 0:
+                loss_percentage = ((current_mcap - baseline_mcap) / baseline_mcap) * 100
+                await self._check_rug_detection_alert(contract_address, token_data, chat_id, loss_percentage)
+            
+            return True
+            
+        except Exception as e:
+            logger.error(f"❌ Error checking alerts for {contract_address} in group {chat_id}: {e}")
+            return False
     
     async def _check_group_tokens(self, chat_id: int, tokens: Dict[str, Dict]):
         """Check tokens for a specific group with detailed logging."""
